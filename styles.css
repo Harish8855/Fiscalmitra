@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root {
+  /* backcground color */
+  --bg-white: #ffffff;
+
+  /* Other colors */
+  --primary-color: #1d3a59;
+  --secondary-color: #3d9244;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+  font-style: normal;
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-white);
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Nav start */
+.navbar {
+  font-weight: 400;
+}
+
+.nav-item:hover {
+  color: var(--secondary-color);
+}
+
+.navbar-toggler-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.nav-link:hover,
+.dropdown-item:hover {
+  color: var(--primary-color);
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.carousel-inner {
+  position: relative;
+}
+
+/* Nav end */
+
+/* Carousel Start */
+.carousel-inner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.carousel-item img {
+  height: 80vh;
+  object-fit: cover;
+  display: block;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  z-index: 2;
+}
+
+@media screen and (max-width: 768px) {
+  .carousel-item img {
+    height: 30vh;
+  }
+}
+
+/* carousel contact */
+.carousel-contact {
+  background-color: var(--primary-color);
+  height: 30px;
+  width: 100%;
+  color: #fff;
+}
+
+/* Hide carousel-contact on small screens */
+@media screen and (max-width: 768px) {
+  .carousel-contact {
+    display: none;
+  }
+}
+
+/* carousel contact end */
+
+/* Carousel Item */
+.carousel-caption {
+  z-index: 10;
+
+}
+
+/* Carousel Item End */
+
+/* email promo */
+.email-promo {
+  color: var(--primary-color);
+  padding: 20px;
+  text-align: center;
+}
+
+.email-promo button {
+  background-color: var(--primary-color);
+  color: white;
+  margin: 15px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.email-promo button:hover {
+  background-color: var(--secondary-color);
+}
+
+/* email promo end */
