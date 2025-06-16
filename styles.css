@@ -16,6 +16,7 @@ html {
   margin: 0;
   padding: 0;
   color: white;
+  box-sizing: border-box;
   font-size: 20px;
   font-weight: 300;
   font-style: normal;
@@ -102,24 +103,83 @@ a {
   color: #fff;
 }
 
-/* Hide carousel-contact on small screens */
 @media screen and (max-width: 768px) {
   .carousel-contact {
     display: none;
   }
 }
 
-/* carousel contact end */
-
 /* Carousel Item */
 .carousel-caption {
   z-index: 10;
-
 }
 
+.box-1 {
+  height: 3rem;
+}
 /* Carousel Item End */
 
-/* email promo */
+/* Credit Score end */
+.container-fluid {
+  padding: 0;
+}
+
+.credit-score {
+  width: 100%;
+  color: var(--primary-color);
+  /* background-color: rgb(233, 233, 233); */
+  font-size: medium;
+}
+
+.credit-score img {
+  height: auto;
+  width: 380px;
+}
+
+.credit-score button {
+  background-color: var(--primary-color);
+  border: none;
+}
+
+.credit-score p {
+  font-weight: 300;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .credit-score p{
+    padding: 3px;
+    font-size: 15px;
+  }
+  }
+
+@media screen and (min-width: 768px) {
+  .credit-score img {
+    height: auto;
+    width: 50%;
+  }
+}
+
+/* Brand Strip */
+
+.brand-strip-container {
+  background-color: rgb(227, 225, 225);
+}
+
+.row {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+@media screen and (max-width: 768px) {
+  .brand-strip img {
+    height: 50px;
+    width: 125px;
+  }
+}
+/* Brand Strip End */
+
+/* Email promo */
 .email-promo {
   color: var(--primary-color);
   padding: 20px;
@@ -140,4 +200,4 @@ a {
   background-color: var(--secondary-color);
 }
 
-/* email promo end */
+/* Email promo end */
