@@ -103,6 +103,10 @@ a {
   color: #fff;
 }
 
+.carousel-contact div:hover {
+  background-color: var(--secondary-color);
+}
+
 @media screen and (max-width: 768px) {
   .carousel-contact {
     display: none;
@@ -141,13 +145,18 @@ a {
   border: none;
 }
 
+.credit-score button:hover {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
 .credit-score p {
   font-weight: 300;
   font-size: 20px;
 }
 
 @media screen and (max-width: 768px) {
-  .credit-score p{
+  .credit-score-info{
     padding: 3px;
     font-size: 15px;
   }
@@ -164,6 +173,11 @@ a {
 
 .brand-strip-container {
   background-color: rgb(227, 225, 225);
+}
+
+.brand-strip img:hover{
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
 }
 
 .row {
@@ -199,5 +213,36 @@ a {
 .email-promo button:hover {
   background-color: var(--secondary-color);
 }
-
 /* Email promo end */
+
+/* Our Presence */
+.our-presence{
+  background-color: rgb(227, 225, 225);
+}
+
+.our-presence img {
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .our-presence p{
+    font-size: 14px;
+  }
+  .our-presence img {
+    height: 80px;
+    width: auto;
+        margin-bottom: 10px;
+  }
+}
+
+.our-presence h1{
+  color: var(--primary-color);
+}
+/* Our Presence end */
+
+/* footer */
+.footer-data:hover {
+font-style: underline;
+}
+
+/* footer end */
