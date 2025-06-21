@@ -30,6 +30,10 @@ a {
   color: white;
 }
 
+p {
+  color: rgb(227, 225, 225);
+}
+
 /* Nav start */
 .navbar {
   font-weight: 400;
@@ -155,12 +159,17 @@ a {
   font-size: 20px;
 }
 
+.credit-score-info {
+  font-size: 18px;
+  color: var(--primary-color);
+}
+
 @media screen and (max-width: 768px) {
-  .credit-score-info{
+  .credit-score-info {
     padding: 3px;
     font-size: 15px;
   }
-  }
+}
 
 @media screen and (min-width: 768px) {
   .credit-score img {
@@ -170,12 +179,11 @@ a {
 }
 
 /* Brand Strip */
-
 .brand-strip-container {
   background-color: rgb(227, 225, 225);
 }
 
-.brand-strip img:hover{
+.brand-strip img:hover {
   transform: scale(1.05);
   transition: transform 0.3s ease;
 }
@@ -191,7 +199,20 @@ a {
     width: 125px;
   }
 }
+
 /* Brand Strip End */
+
+/* testimonial */
+.testimonial h2,
+p {
+  color: var(--primary-color);
+}
+
+.card-text {
+  color: var(--primary-color);
+}
+
+/* testimonial end */
 
 /* Email promo */
 .email-promo {
@@ -213,10 +234,11 @@ a {
 .email-promo button:hover {
   background-color: var(--secondary-color);
 }
+
 /* Email promo end */
 
 /* Our Presence */
-.our-presence{
+.our-presence {
   background-color: rgb(227, 225, 225);
 }
 
@@ -224,25 +246,48 @@ a {
   margin-bottom: 1.5rem;
 }
 
+.our-presence a {
+  display: inline-block;
+}
+
 @media screen and (max-width: 768px) {
-  .our-presence p{
+  .our-presence p {
     font-size: 14px;
   }
+
   .our-presence img {
     height: 80px;
     width: auto;
-        margin-bottom: 10px;
+    margin-bottom: 10px;
   }
 }
 
-.our-presence h1{
+.our-presence h1 {
   color: var(--primary-color);
 }
+
 /* Our Presence end */
 
 /* footer */
-.footer-data:hover {
-font-style: underline;
+.footer {
+  background-color: var(--primary-color);
+}
+
+.footer-link a,
+p {
+  color: rgb(227, 225, 225);
+  transition: color 0.2s ease;
+}
+
+.footer-link img {
+  height: 25px;
+  width: auto;
+  margin-right: 10px;
+}
+
+.footer-link a:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
 }
 
 /* footer end */
