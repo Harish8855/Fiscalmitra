@@ -125,6 +125,7 @@ p {
 .box-1 {
   height: 3rem;
 }
+
 /* Carousel Item End */
 
 /* Credit Score end */
@@ -135,7 +136,6 @@ p {
 .credit-score {
   width: 100%;
   color: var(--primary-color);
-  /* background-color: rgb(233, 233, 233); */
   font-size: medium;
 }
 
@@ -151,7 +151,7 @@ p {
 
 .credit-score button:hover {
   background-color: var(--secondary-color);
-  color: white;
+  transition: transform 0.3s ease;
 }
 
 .credit-score p {
@@ -242,8 +242,16 @@ p {
   background-color: rgb(227, 225, 225);
 }
 
-.our-presence img {
+.op-img {
+  height: 200px;
+  width: auto;
   margin-bottom: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.op-img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
 }
 
 .our-presence a {
@@ -273,6 +281,17 @@ p {
   background-color: var(--primary-color);
 }
 
+.footer-link a {
+  word-break: normal;
+  overflow: break-word;
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer-link a{
+  max-width: 100%;
+}
+
 .footer-link a,
 p {
   color: rgb(227, 225, 225);
@@ -288,6 +307,23 @@ p {
 .footer-link a:hover {
   color: var(--secondary-color);
   text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+  .site {
+    width: 10rem;
+  }
+}
+
+.social img {
+  height: 40px;
+  width: auto;
+}
+
+.social img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  color: var(--secondary-color);
 }
 
 /* footer end */
