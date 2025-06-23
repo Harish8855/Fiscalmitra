@@ -283,7 +283,6 @@ p {
 
 .footer-link a {
   word-break: normal;
-  overflow: break-word;
   display: inline-flex;
   align-items: center;
 }
