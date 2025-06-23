@@ -308,12 +308,6 @@ p {
   text-decoration: underline;
 }
 
-@media screen and (max-width: 768px) {
-  .site {
-    width: 10rem;
-  }
-}
-
 .social img {
   height: 40px;
   width: auto;
