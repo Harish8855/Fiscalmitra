@@ -5,16 +5,103 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.cssp">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles.css">
   <title>Fiscalmitra | Home</title>
+  <style>
+    .HL-bg {
+      background-image: url("Assets/HL.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      min-height: 300px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    form .form-label {
+      color: #ffffff;
+      font-size: 15px;
+    }
+
+    form .form-control,
+    form .form-select {
+      border-radius: 8px;
+      font-size: 15px;
+      padding: 0.7rem 1rem;
+    }
+
+    form .btn {
+      border-radius: 0;
+      letter-spacing: 2px;
+    }
+
+    /* Custom card styling for benefits section */
+    .benefit-card {
+      border: 1px solid #e3eafc;
+      box-shadow: 0 8px 24px 0 rgba(29, 58, 89, 0.07);
+      border-radius: 0;
+      transition: box-shadow 0.2s;
+      background: #fff;
+      min-height: 180px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .benefit-card .card-title {
+      color: #1d3a59;
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+    }
+
+    .benefit-card .card-text {
+      color: #7b7b93;
+      font-size: 1rem;
+      font-weight: 400;
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 991.98px) {
+      .benefit-card {
+        min-height: 200px;
+      }
+    }
+
+    @media (max-width: 767.98px) {
+      .benefit-card {
+        min-height: 0;
+      }
+    }
+
+    .benefits-title {
+      color: #1d3a59;
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.5px;
+    }
+
+    .benefits-desc {
+      color: #7b7b93;
+      font-size: 1.15rem;
+      font-weight: 400;
+      margin-bottom: 2.5rem;
+    }
+  </style>
 </head>
 
 <body>
   <!-- Navbar Start -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
     <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="#">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
         <img src="Assets/Web logo.png" alt="Logo" width="40" height="48" class="me-2">
         <span class="fw-bold" style="font-size: 1.2rem;">FiscalMitra</span>
       </a>
@@ -66,7 +153,368 @@
   </nav>
   <!-- Navbar End -->
 
- 
+  <!-- Form -->
+  <div class="container-fluid HL-bg">
+    <div class="container">
+      <div class="my-5">
+        <h1 class="fw-bold">Personal Loans starting @10.50%*</h1>
+        <h3 class="fw-bold">Request Quote Now</h3>
+        <p>Easy to apply for a loan with us, Once you have complete this form.</p>
+        <form>
+          <div class="row g-3">
+            <div class="col-md-4">
+              <label class="form-label fw-semibold">Enter loan amount</label>
+              <input type="text" class="form-control" placeholder="₹ Enter loan amount" required>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label fw-semibold">Enter Monthly Salary</label>
+              <input type="text" class="form-control" placeholder="₹ Salary" required>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label fw-semibold">Enter your resident postal code</label>
+              <input type="text" class="form-control" placeholder="Enter your resident postal code" required>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label fw-semibold">Enter your employment type</label>
+              <input type="text" class="form-control" placeholder="Private">
+            </div>
+            <div class="col-md-4">
+              <label class="form-label fw-semibold">Your workplace name</label>
+              <input type="text" class="form-control" placeholder="Your workplace name">
+            </div>
+            <div class="col-md-4">
+              <label class="form-label fw-semibold">Current account bank name</label>
+              <select name="bank_name" class="form-control input-md" required="">
+                <option value="" style="display:none;">Select Bank</option>
+                <option value="Australia and New Zealand Banking">Australia and New Zealand Banking</option>
+                <option value="AB Bank Ltd.">AB Bank Ltd.</option>
+                <option value="Abhyudaya Co-op Bank Ltd">Abhyudaya Co-op Bank Ltd</option>
+                <option value="Abu Dhabi Commercial Bank Ltd">Abu Dhabi Commercial Bank Ltd</option>
+                <option value="Ahmedabad Mercantile Co-op Bank">Ahmedabad Mercantile Co-op Bank</option>
+                <option value="Allahabad Bank">Allahabad Bank</option>
+                <option value="Andhra Bank">Andhra Bank</option>
+                <option value="Antwerp Diamond Bank Mumbai">Antwerp Diamond Bank Mumbai</option>
+                <option value="Axis Bank">Axis Bank</option>
+                <option value="Bank Internasional Indonesia">Bank Internasional Indonesia</option>
+                <option value="Bank Of America">Bank Of America</option>
+                <option value="Bank Of Bahrain And Kuwait">Bank Of Bahrain And Kuwait</option>
+                <option value="Bank of Baroda">Bank of Baroda</option>
+                <option value="Bank Of Ceylon">Bank Of Ceylon</option>
+                <option value="Bank of India">Bank of India</option>
+                <option value="Bank Of Maharashtra">Bank Of Maharashtra</option>
+                <option value="Bank Of Nova Scotia">Bank Of Nova Scotia</option>
+                <option value="Bank Of Tokyo-Mitsubishi Ufj Ltd">Bank Of Tokyo-Mitsubishi Ufj Ltd</option>
+                <option value="Barclays Bank Plc">Barclays Bank Plc</option>
+                <option value="Bassein Catholic Co-op Bank Ltd">Bassein Catholic Co-op Bank Ltd</option>
+                <option value="Bharat Co-op Bank (Mumbai) Ltd">Bharat Co-op Bank (Mumbai) Ltd</option>
+                <option value="BNP Paribas">BNP Paribas</option>
+                <option value="Bombay Mercantile Co-operative bank Limited">Bombay Mercantile Co-operative bank Limited
+                </option>
+                <option value="Canara Bank">Canara Bank</option>
+                <option value="Catholic Syrian Bank Ltd">Catholic Syrian Bank Ltd</option>
+                <option value="Central Bank of India">Central Bank of India</option>
+                <option value="Chinatrust Commercial Bank">Chinatrust Commercial Bank</option>
+                <option value="Citibank India">Citibank India</option>
+                <option value="Citizencredit Co-op Bank Ltd">Citizencredit Co-op Bank Ltd</option>
+                <option value="City Union Bank Ltd">City Union Bank Ltd</option>
+                <option value="Commonwealth Bank of Australia">Commonwealth Bank of Australia</option>
+                <option value="Corporation Bank">Corporation Bank</option>
+                <option value="Cosmos Co-op Bank Ltd">Cosmos Co-op Bank Ltd</option>
+                <option value="Credit Agricole Corp and Investment Bank">Credit Agricole Corp and Investment Bank
+                </option>
+                <option value="DBS Bank">DBS Bank</option>
+                <option value="Dena Bank">Dena Bank</option>
+                <option value="Deutsche Bank Ag">Deutsche Bank Ag</option>
+                <option value="Development Credit Bank">Development Credit Bank</option>
+                <option value="Dhanlaxmi Bank Ltd">Dhanlaxmi Bank Ltd</option>
+                <option value="Dicgc">Dicgc</option>
+                <option value="Doha Bank">Doha Bank</option>
+                <option value="Dombivli Nagari Sahakari Bank Ltd">Dombivli Nagari Sahakari Bank Ltd</option>
+                <option value="Emirates NBD Bank  PJSC">Emirates NBD Bank PJSC</option>
+                <option value="Export-Import Bank of India">Export-Import Bank of India</option>
+                <option value="Federal Bank Ltd">Federal Bank Ltd</option>
+                <option value="Firstrand Bank Ltd">Firstrand Bank Ltd</option>
+                <option value="Greater Bombay Co-op Bank Ltd">Greater Bombay Co-op Bank Ltd</option>
+                <option value="Group Limited&quot;">Group Limited"</option>
+                <option value="HDFC Bank">HDFC Bank</option>
+                <option value="HSBC">HSBC</option>
+                <option value="HSBC Bank Oman S.A.O.G.">HSBC Bank Oman S.A.O.G.</option>
+                <option value="ICICI Bank">ICICI Bank</option>
+                <option value="IDBI Bank">IDBI Bank</option>
+                <option value="IDFC FIRST BANK LIMITED">IDFC FIRST BANK LIMITED</option>
+                <option value="IFCI Factors Limited">IFCI Factors Limited</option>
+                <option value="Indian Bank">Indian Bank</option>
+                <option value="Indian Overseas Bank">Indian Overseas Bank</option>
+                <option value="IndusInd Bank Ltd.">IndusInd Bank Ltd.</option>
+                <option value="Industrial and Commercial Bank of China Ltd.">Industrial and Commercial Bank of China
+                  Ltd.</option>
+                <option value="Industrial Bank of  Korea">Industrial Bank of Korea</option>
+                <option value="ING Vysya Bank">ING Vysya Bank</option>
+                <option value="Jammu &amp; Kashmir Bank Ltd.">Jammu &amp; Kashmir Bank Ltd.</option>
+                <option value="Janakalyan Sahakari Bank Ltd">Janakalyan Sahakari Bank Ltd</option>
+                <option value="Janata Sahkari Bank Ltd Pune">Janata Sahkari Bank Ltd Pune</option>
+                <option value="Jpmorgan Chase Bank">Jpmorgan Chase Bank</option>
+                <option value="Kalupur Commercial Co-op Bank Ltd">Kalupur Commercial Co-op Bank Ltd</option>
+                <option value="Kalyan Janata Sahakari Bank Ltd">Kalyan Janata Sahakari Bank Ltd</option>
+                <option value="Kapole Co-op Bank">Kapole Co-op Bank</option>
+                <option value="Karnataka Bank Ltd.">Karnataka Bank Ltd.</option>
+                <option value="Karnataka State Co-op Apex Bank">Karnataka State Co-op Apex Bank</option>
+                <option value="Karur Vysya Bank">Karur Vysya Bank</option>
+                <option value="KEB  Hana Bank">KEB Hana Bank</option>
+                <option value="Kotak Mahindra Bank">Kotak Mahindra Bank</option>
+                <option value="Krung Thai Bank PCL Mumbai">Krung Thai Bank PCL Mumbai</option>
+                <option value="Lakshmi Vilas Bank Ltd">Lakshmi Vilas Bank Ltd</option>
+                <option value="Mahanagar Co-op Bank Ltd">Mahanagar Co-op Bank Ltd</option>
+                <option value="Maharashtra State Co-operative Bank Limited">Maharashtra State Co-operative Bank Limited
+                </option>
+                <option value="Mashreq Bank Psc">Mashreq Bank Psc</option>
+                <option value="Mehsana Urban Co-op Bank Ltd">Mehsana Urban Co-op Bank Ltd</option>
+                <option value="Mizuho Corporate Bank Ltd">Mizuho Corporate Bank Ltd</option>
+                <option value="Nainital Bank Ltd">Nainital Bank Ltd</option>
+                <option value="National Australia Bank">National Australia Bank</option>
+                <option value="National Bank of Abu Dhabi PJSC">National Bank of Abu Dhabi PJSC</option>
+                <option value="New India Co-op Bank Ltd">New India Co-op Bank Ltd</option>
+                <option value="Nkgsb Co-op Bank Ltd">Nkgsb Co-op Bank Ltd</option>
+                <option value="Nutan Nagarik Sahakari Bank Ltd">Nutan Nagarik Sahakari Bank Ltd</option>
+                <option value="Oman International Bank Saog">Oman International Bank Saog</option>
+                <option value="Oriental Bank of Commerce">Oriental Bank of Commerce</option>
+                <option value="Parsik Janata Sahakari Bank Ltd">Parsik Janata Sahakari Bank Ltd</option>
+                <option value="Punjab &amp; Sind Bank">Punjab &amp; Sind Bank</option>
+                <option value="Punjab and Maharashtra Bank Ltd.">Punjab and Maharashtra Bank Ltd.</option>
+                <option value="Punjab National Bank">Punjab National Bank</option>
+                <option value="Qatar National Bank(QPSC)">Qatar National Bank(QPSC)</option>
+                <option value="Rabobank International">Rabobank International</option>
+                <option value="Rajkot Nagarik Sahakari Bank Ltd">Rajkot Nagarik Sahakari Bank Ltd</option>
+                <option value="Ratnakar Bank Ltd">Ratnakar Bank Ltd</option>
+                <option value="Reserve Bank Of India">Reserve Bank Of India</option>
+                <option value="Royal bank of scotland">Royal bank of scotland</option>
+                <option value="Saraswat Co-operative Bank Ltd.">Saraswat Co-operative Bank Ltd.</option>
+                <option value="Sberbank">Sberbank</option>
+                <option value="SBI Global Factors Ltd">SBI Global Factors Ltd</option>
+                <option value="Shamrao Vithal Co-op Bank Ltd">Shamrao Vithal Co-op Bank Ltd</option>
+                <option value="Shinhan Bank">Shinhan Bank</option>
+                <option value="Societe Generale">Societe Generale</option>
+                <option value="Sonali Bank Ltd.">Sonali Bank Ltd.</option>
+                <option value="South Indian Bank">South Indian Bank</option>
+                <option value="Standard Chartered Bank">Standard Chartered Bank</option>
+                <option value="State Bank Of Bikaner And Jaipur">State Bank Of Bikaner And Jaipur</option>
+                <option value="State Bank of Hyderabad">State Bank of Hyderabad</option>
+                <option value="State Bank of India">State Bank of India</option>
+                <option value="State Bank Of Mauritius Ltd">State Bank Of Mauritius Ltd</option>
+                <option value="State Bank of Mysore">State Bank of Mysore</option>
+                <option value="State Bank Of Patiala">State Bank Of Patiala</option>
+                <option value="State Bank of Saurashtra">State Bank of Saurashtra</option>
+                <option value="State Bank Of Travancore">State Bank Of Travancore</option>
+                <option value="Sumitomo Mitsui Banking Corporation">Sumitomo Mitsui Banking Corporation</option>
+                <option value="Surat Peoples Co-op Bank Ltd">Surat Peoples Co-op Bank Ltd</option>
+                <option value="Syndicate Bank">Syndicate Bank</option>
+                <option value="Tamilnad Mercantile Bank Ltd">Tamilnad Mercantile Bank Ltd</option>
+                <option value="Thane Janta Sahakari Bank, Ltd.">Thane Janta Sahakari Bank, Ltd.</option>
+                <option value="The Karad Urban Co-op Bank Ltd">The Karad Urban Co-op Bank Ltd</option>
+                <option value="The Nasik Merchants Co-op Bank Ltd">The Nasik Merchants Co-op Bank Ltd</option>
+                <option value="UBS AG">UBS AG</option>
+                <option value="UCO Bank">UCO Bank</option>
+                <option value="Union Bank of India">Union Bank of India</option>
+                <option value="United Bank of India">United Bank of India</option>
+                <option value="United Overseas Bank">United Overseas Bank</option>
+                <option value="Vijaya Bank">Vijaya Bank</option>
+                <option value="West Bengal State Co-op Bank Ltd">West Bengal State Co-op Bank Ltd</option>
+                <option value="Westpac Banking Corporation">Westpac Banking Corporation</option>
+                <option value="Woori Bank">Woori Bank</option>
+                <option value="Yes Bank">Yes Bank</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label fw-semibold">Enter full name, Ex: Firstname Lastname</label>
+              <input type="text" class="form-control" placeholder="Enter full name, Ex: Firstname Lastname" required>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label fw-semibold">Enter your email id (Ex: some@something.com)</label>
+              <input type="email" class="form-control" placeholder="Enter your email id (Ex: some@something.com)"
+                required>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label fw-semibold">Enter 10-digit mobile number.</label>
+              <input type="text" class="form-control" placeholder="Enter 10-digit mobile number." required>
+            </div>
+          </div>
+          <div style="font-size: 0.8rem;" class="mt-4 mb-2">
+            I have read and agreed to <a href="tos.html" style="color:#e91e63; font-weight:500;">Terms & Conditions</a>
+            and
+            authorized FiscalMitra to contact me. This will override registry on DND / NDNC. I also hereby appoint
+            FiscalMitra as my authorised representative to receive my credit information from Cibil/ Equifax/ Experian/
+            Highmark (bureau). <b>By clicking submit you are agreeing to the Terms and Conditions.</b>
+          </div>
+          <button type="submit" class="btn w-100 py-2"
+            style="background:#e91e63; color:#fff; font-weight:600; font-size:18px;">SUBMIT</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- Form End -->
+
+  <!-- Card-->
+  <div class="container text-center mt-5 mb-4">
+    <h2 class="benefits-title">Benefits at Finance Mitra ?</h2>
+    <p class="benefits-desc">Tons of benefits with us compare to our competitors.</p>
+    <div class="row justify-content-center g-4">
+      <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 d-flex">
+        <div class="card benefit-card w-100">
+          <div class="card-body">
+            <div class="card-title">COMPARE &amp; AVAIL</div>
+            <div class="card-text">Minimum Rates from different financial institutions.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 d-flex">
+        <div class="card benefit-card w-100">
+          <div class="card-body">
+            <div class="card-title">BANKING CONVENIENCE</div>
+            <div class="card-text">On your Fingertips loans and cards available at door step.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 d-flex">
+        <div class="card benefit-card w-100">
+          <div class="card-body">
+            <div class="card-title">EARN</div>
+            <div class="card-text">Earn Your EMI using our referral based model Click here for more information.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 d-flex">
+        <div class="card benefit-card w-100">
+          <div class="card-body">
+            <div class="card-title">BECOME</div>
+            <div class="card-text">Partner &amp; earn with zero investment Click here for more information.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Card end -->
+
+  <!-- Details -->
+  <div class="container-fluid casual-bg text-muted">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-lg-12 ">
+          <div class="mb-5 mb-lg-0">
+
+            <h2 class="text-dark mt-3">Personal Loan</h2>
+            <p class="text-muted"><b>Not letting you stand alone, when you need a loan!</b><br>
+
+              Personal loan is an unsecured loan to fund any type of financial emergency. For getting this type of loan
+              usually you needn’t submit any security or collateral and get an easy access to use the funds as per your
+              choice. A personal loan is the perfect solution for funding personal crisis like wedding or divorce as
+              well as managing unexpected medical, debt consolidation, traveling, home renovation, and others. Finance
+              Mitra is your one-stop shop for all your personal loan requirements with instant approval and disbursal
+              within few hours. Learn more about our personal loan offering and apply for your loan within a few clicks.
+            </p><br>
+            <p>
+
+
+              <b class="text-muted">Eligibility</b><br>
+            </p>
+            <ul>
+              <li>Indian resident</li>
+              <li>Age limit from 21-65 years</li>
+              <li>Loan Tenure shouldn’t exceed to 5 years</li>
+              <li>Minimum income of applicant shouldn’t be less than Rs. 30000</li>
+              <li>Maximum EMI for a loan will be up to 75% of the net salary</li>
+            </ul>
+            <br>
+
+            <b>Documents Required:</b><br>
+
+            <b>SALARIED PROFESSIONALS</b><br>
+
+            <ul>
+              <li>Identity proof - Driving License/Voters ID/Permanent Account Number (PAN Card)/Passport/Aadhar Card
+              </li>
+              <li>Address Proof – Rental Agreement/Electricity Bill/Utility Bill/Passport/Bank
+                Passbook/Government-authorized Identity proof</li>
+              <li>Pay Slip and Bank statement – Authorized pay slips/ bank account where income is credited</li>
+              <li>Latest Form 16</li>
+              <li>2 Passport size photographs</li>
+            </ul><br>
+            <b>
+              Benefits of Personal loan from Finance Mitra
+            </b><br>
+            <ul>
+              <li>No security or collateral </li>
+              <li>Limited number of documents</li>
+              <li>Faster and easy processing</li>
+              <li>Reliable and user-friendly assistance</li>
+              <li>Get a quick loan for all requirements</li>
+            </ul>
+            <p></p>
+          </div>
+        </div>
+
+        <div class="accordion" id="accordionExample">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h2 class="mb-0">
+                <button class="accordion-btn btn p-0 border-0 bg-transparent shadow-none text-dark fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                  aria-expanded="true" aria-controls="collapseOne" style="font-size:1rem;">
+                  What Is a Personal Loan?
+                </button>
+              </h2>
+            </div>
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+              <div class="card-body">
+               A personal loan is a credit that is granted by banks, NBFCs, online lenders, or other financial institutions for personal use. Personal loans are often unsecured and the credit limits are based on borrower’s existing financial statement and ability to pay. Personal loans are suitable for borrowers with an excellent credit score. A personal loan is an amount borrowed from a lender at a fixed rate of interest over a fixed period.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h2 class="mb-0">
+                <button class="accordion-btn btn p-0 border-0 bg-transparent shadow-none text-dark fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                  aria-expanded="false" aria-controls="collapseTwo" style="font-size:1rem;">
+                  Benefits of Personal Loan
+                </button>
+              </h2>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+              <div class="card-body">
+                Finance Mitra recommends personal loans for those who are in temporary financial emergencies. Personal loans are easily available with all top financial lenders.
+                <ul>
+                  <li>No security required</li>
+                  <li>Loans processed with limited documents</li>
+                  <li>Quick and easy processing</li>
+                  <li>Quick and easy processing</li>
+                  <li>Create an emergency fund</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h2 class="mb-0">
+                <button class="accordion-btn btn p-0 border-0 bg-transparent shadow-none text-dark fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                  aria-expanded="false" aria-controls="collapseThree" style="font-size:1rem;">
+                  Who & When Can Personal Loan Be Taken ?
+                </button>
+              </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+              <div class="card-body">
+               An eligible candidate should be a minimum of 21 years to take a personal loan. The maximum age limit can go up to 60 years for salaried employees and 65 years for non-salaried professionals at the time of maturity. The age limit varies from bank to bank. Minimum income for a personal loan should be between Rs.20,000 to Rs. 25,000. The maximum EMI for a loan will be up to 75% of Net Salary depending upon the organization in which the applicant work.
+              </div>
+              <div class="card-body">
+                A personal loan can be used for any expenses such as medical, home improvements, moving, wedding, debt consolidation, vacation, shortcomings, educational expenses and more.
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- Details End -->
 
   <!-- footer -->
   <div style="background-color: #1d3a59;" class="footer container-fluid">
@@ -92,11 +540,12 @@
             <a href="ba.html">Become associate</a>
           </p>
         </div>
-        
+
         <div class="col-12 col-md-7 col-lg-4 mb-3">
           <h6 class="mt-3">Contact Us</h6>
           <p class="mb-0 footer-link">
-            <a style="word-break: break-all;" href="mailto:plymoutheepl25@gmail.com" class="d-flex align-items-center gap-2">
+            <a style="word-break: break-all;" href="mailto:plymoutheepl25@gmail.com"
+              class="d-flex align-items-center gap-2">
               <img src="Assets/mail-icon.png" alt="">
               plymoutheepl25@gmail.com
             </a>
@@ -114,22 +563,22 @@
             </a>
           </p>
         </div>
-        
+
         <div class="social col-12 col-md-5 col-lg-3">
           <h6 class="mt-3">Connect with us</h6>
-         <a href="https://www.instagram.com/fiscalmitra/">
-          <img src="Assets/instagram.png" alt="">
-         </a>
-         <a href="https://x.com/Fiscalmitra25">
-          <img src="Assets/twitter.png" alt="">
-         </a>
-         <a href="https://www.youtube.com/@Fiscalmitra">
-          <img src="Assets/video.png" alt="">
-         </a>
+          <a href="https://www.instagram.com/fiscalmitra/">
+            <img src="Assets/instagram.png" alt="">
+          </a>
+          <a href="https://x.com/Fiscalmitra25">
+            <img src="Assets/twitter.png" alt="">
+          </a>
+          <a href="https://www.youtube.com/@Fiscalmitra">
+            <img src="Assets/video.png" alt="">
+          </a>
         </div>
-        
+
       </div>
-      <div class="col-12 p-3 text-center style="background-color: #1d3a59; color: white;">
+      <div class="col-12 p-3 text-center style=" background-color: #1d3a59; color: white;">
         © 2023 Fiscalmitra. All rights reserved.
     </footer>
   </div>

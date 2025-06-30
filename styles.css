@@ -30,8 +30,13 @@ a {
   color: white;
 }
 
-p {
-  color: rgb(227, 225, 225);
+b {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.text-muted{
+  font-size: 0.8rem;
 }
 
 /* Nav start */
@@ -204,7 +209,7 @@ p {
 
 /* testimonial */
 .testimonial h2,
-p {
+.card-text {
   color: var(--primary-color);
 }
 
@@ -287,7 +292,7 @@ p {
   align-items: center;
 }
 
-.footer-link a{
+.footer-link a {
   max-width: 100%;
 }
 
@@ -318,5 +323,20 @@ p {
   transition: transform 0.3s ease;
   color: var(--secondary-color);
 }
-
 /* footer end */
+
+/* Background */
+ .HL-bg {
+      background-image: url("Assets/HL.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      min-height: 300px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    .casual-bg{
+      background-color:rgb(239, 243, 245);
+    }
