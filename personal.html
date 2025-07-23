@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.cssp">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles.css">
   <title>Fiscalmitra | Home</title>
@@ -38,7 +38,6 @@
       letter-spacing: 2px;
     }
 
-    /* Custom card styling for benefits section */
     .benefit-card {
       border: 1px solid #e3eafc;
       box-shadow: 0 8px 24px 0 rgba(29, 58, 89, 0.07);
@@ -50,6 +49,14 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+    }
+
+    .benefit-card {
+      box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.15);
+    }
+
+    .benefit-card:hover {
+      box-shadow: 0 8px 32px 0 rgba(255, 193, 7, 0.7), 0 4px 16px 0 rgba(0, 0, 0, 0.15);
     }
 
     .benefit-card .card-title {
@@ -93,6 +100,12 @@
       font-size: 1.15rem;
       font-weight: 400;
       margin-bottom: 2.5rem;
+    }
+
+    .accordion {
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
     }
   </style>
 </head>
@@ -160,31 +173,31 @@
         <h1 class="fw-bold">Personal Loans starting @10.50%*</h1>
         <h3 class="fw-bold">Request Quote Now</h3>
         <p>Easy to apply for a loan with us, Once you have complete this form.</p>
-        <form>
+        <form id="personalLoanForm">
           <div class="row g-3">
             <div class="col-md-4">
               <label class="form-label fw-semibold">Enter loan amount</label>
-              <input type="text" class="form-control" placeholder="₹ Enter loan amount" required>
+              <input type="text" class="form-control" name="loan_amount" placeholder="₹ Enter loan amount" required>
             </div>
             <div class="col-md-4">
               <label class="form-label fw-semibold">Enter Monthly Salary</label>
-              <input type="text" class="form-control" placeholder="₹ Salary" required>
+              <input type="text" class="form-control" name="monthly_salary" placeholder="₹ Salary" required>
             </div>
             <div class="col-md-4">
               <label class="form-label fw-semibold">Enter your resident postal code</label>
-              <input type="text" class="form-control" placeholder="Enter your resident postal code" required>
+              <input type="text" class="form-control" name="postal_code" placeholder="Enter your resident postal code" required>
             </div>
             <div class="col-md-4">
               <label class="form-label fw-semibold">Enter your employment type</label>
-              <input type="text" class="form-control" placeholder="Private">
+              <input type="text" class="form-control" name="employment_type" placeholder="Private">
             </div>
             <div class="col-md-4">
               <label class="form-label fw-semibold">Your workplace name</label>
-              <input type="text" class="form-control" placeholder="Your workplace name">
+              <input type="text" class="form-control" name="workplace_name" placeholder="Your workplace name">
             </div>
             <div class="col-md-4">
               <label class="form-label fw-semibold">Current account bank name</label>
-              <select name="bank_name" class="form-control input-md" required="">
+              <select name="bank_name" class="form-control input-md" required>
                 <option value="" style="display:none;">Select Bank</option>
                 <option value="Australia and New Zealand Banking">Australia and New Zealand Banking</option>
                 <option value="AB Bank Ltd.">AB Bank Ltd.</option>
@@ -326,16 +339,15 @@
             </div>
             <div class="col-md-4">
               <label class="form-label fw-semibold">Enter full name, Ex: Firstname Lastname</label>
-              <input type="text" class="form-control" placeholder="Enter full name, Ex: Firstname Lastname" required>
+              <input type="text" class="form-control" name="full_name" placeholder="Enter full name, Ex: Firstname Lastname" required>
             </div>
             <div class="col-md-4">
               <label class="form-label fw-semibold">Enter your email id (Ex: some@something.com)</label>
-              <input type="email" class="form-control" placeholder="Enter your email id (Ex: some@something.com)"
-                required>
+              <input type="email" class="form-control" name="email" placeholder="Enter your email id (Ex: some@something.com)" required>
             </div>
             <div class="col-md-4">
               <label class="form-label fw-semibold">Enter 10-digit mobile number.</label>
-              <input type="text" class="form-control" placeholder="Enter 10-digit mobile number." required>
+              <input type="text" class="form-control" name="mobile" placeholder="Enter 10-digit mobile number." required>
             </div>
           </div>
           <div style="font-size: 0.8rem;" class="mt-4 mb-2">
@@ -355,7 +367,7 @@
 
   <!-- Card-->
   <div class="container text-center mt-5 mb-4">
-    <h2 class="benefits-title">Benefits at Finance Mitra ?</h2>
+    <h2 class="benefits-title">Benefits at FiscalMitra ?</h2>
     <p class="benefits-desc">Tons of benefits with us compare to our competitors.</p>
     <div class="row justify-content-center g-4">
       <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 d-flex">
@@ -397,122 +409,278 @@
   <!-- Details -->
   <div class="container-fluid casual-bg text-muted">
     <div class="container">
+      <!-- <div class="row"> -->
+      <div class="col-lg-12 p-3">
+        <div class="mb-5 mb-lg-0">
+          <h2 class="text-dark mt-3">Personal Loan</h2>
+          <p class="text-muted"><b>Not letting you stand alone, when you need a loan!</b><br>
 
-      <div class="row">
-        <div class="col-lg-12 ">
-          <div class="mb-5 mb-lg-0">
-
-            <h2 class="text-dark mt-3">Personal Loan</h2>
-            <p class="text-muted"><b>Not letting you stand alone, when you need a loan!</b><br>
-
-              Personal loan is an unsecured loan to fund any type of financial emergency. For getting this type of loan
-              usually you needn’t submit any security or collateral and get an easy access to use the funds as per your
-              choice. A personal loan is the perfect solution for funding personal crisis like wedding or divorce as
-              well as managing unexpected medical, debt consolidation, traveling, home renovation, and others. Finance
-              Mitra is your one-stop shop for all your personal loan requirements with instant approval and disbursal
-              within few hours. Learn more about our personal loan offering and apply for your loan within a few clicks.
-            </p><br>
-            <p>
-
-
-              <b class="text-muted">Eligibility</b><br>
-            </p>
-            <ul>
-              <li>Indian resident</li>
-              <li>Age limit from 21-65 years</li>
-              <li>Loan Tenure shouldn’t exceed to 5 years</li>
-              <li>Minimum income of applicant shouldn’t be less than Rs. 30000</li>
-              <li>Maximum EMI for a loan will be up to 75% of the net salary</li>
-            </ul>
-            <br>
-
-            <b>Documents Required:</b><br>
-
-            <b>SALARIED PROFESSIONALS</b><br>
-
-            <ul>
-              <li>Identity proof - Driving License/Voters ID/Permanent Account Number (PAN Card)/Passport/Aadhar Card
-              </li>
-              <li>Address Proof – Rental Agreement/Electricity Bill/Utility Bill/Passport/Bank
-                Passbook/Government-authorized Identity proof</li>
-              <li>Pay Slip and Bank statement – Authorized pay slips/ bank account where income is credited</li>
-              <li>Latest Form 16</li>
-              <li>2 Passport size photographs</li>
-            </ul><br>
-            <b>
-              Benefits of Personal loan from Finance Mitra
-            </b><br>
-            <ul>
-              <li>No security or collateral </li>
-              <li>Limited number of documents</li>
-              <li>Faster and easy processing</li>
-              <li>Reliable and user-friendly assistance</li>
-              <li>Get a quick loan for all requirements</li>
-            </ul>
-            <p></p>
-          </div>
+            Personal loan is an unsecured loan to fund any type of financial emergency. For getting this type of loan
+            usually you needn’t submit any security or collateral and get an easy access to use the funds as per your
+            choice. A personal loan is the perfect solution for funding personal crisis like wedding or divorce as
+            well as managing unexpected medical, debt consolidation, traveling, home renovation, and others. Finance
+            Mitra is your one-stop shop for all your personal loan requirements with instant approval and disbursal
+            within few hours. Learn more about our personal loan offering and apply for your loan within a few clicks.
+          </p><br>
+          <p>
+            <b class="text-muted">Eligibility</b><br>
+          </p>
+          <ul>
+            <li>Indian resident</li>
+            <li>Age limit from 21-65 years</li>
+            <li>Loan Tenure shouldn’t exceed to 5 years</li>
+            <li>Minimum income of applicant shouldn’t be less than Rs. 30000</li>
+            <li>Maximum EMI for a loan will be up to 75% of the net salary</li>
+          </ul>
+          <br>
+          <b>Documents Required:</b><br>
+          <b>SALARIED PROFESSIONALS</b><br>
+          <ul>
+            <li>Identity proof - Driving License/Voters ID/Permanent Account Number (PAN Card)/Passport/Aadhar Card
+            </li>
+            <li>Address Proof – Rental Agreement/Electricity Bill/Utility Bill/Passport/Bank
+              Passbook/Government-authorized Identity proof</li>
+            <li>Pay Slip and Bank statement – Authorized pay slips/ bank account where income is credited</li>
+            <li>Latest Form 16</li>
+            <li>2 Passport size photographs</li>
+          </ul><br>
+          <b>
+            Benefits of Personal loan from FiscalMitra
+          </b><br>
+          <ul>
+            <li>No security or collateral </li>
+            <li>Limited number of documents</li>
+            <li>Faster and easy processing</li>
+            <li>Reliable and user-friendly assistance</li>
+            <li>Get a quick loan for all requirements</li>
+          </ul>
+          <p></p>
         </div>
-
-        <div class="accordion" id="accordionExample">
-          <div class="card">
-            <div class="card-header" id="headingOne">
-              <h2 class="mb-0">
-                <button class="accordion-btn btn p-0 border-0 bg-transparent shadow-none text-dark fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                  aria-expanded="true" aria-controls="collapseOne" style="font-size:1rem;">
-                  What Is a Personal Loan?
-                </button>
-              </h2>
-            </div>
-            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-              <div class="card-body">
-               A personal loan is a credit that is granted by banks, NBFCs, online lenders, or other financial institutions for personal use. Personal loans are often unsecured and the credit limits are based on borrower’s existing financial statement and ability to pay. Personal loans are suitable for borrowers with an excellent credit score. A personal loan is an amount borrowed from a lender at a fixed rate of interest over a fixed period.
-              </div>
-            </div>
+      </div>
+      <div class="accordion" id="accordionExampleMain">
+        <div class="card mb-3">
+          <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+              <button class="accordion-btn btn p-0 border-0 bg-transparent shadow-none text-dark fw-semibold collapsed"
+                type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                aria-controls="collapseOne" style="font-size:1rem;">
+                <span class="icon-toggle">
+                  <i class="fa-solid fa-plus" style="color: #df1e63;"></i>
+                  <i class="fa-solid fa-minus" style="color: #df1e63; display:none;"></i>
+                </span>
+                What Is a Personal Loan?
+              </button>
+            </h2>
           </div>
-          <div class="card">
-            <div class="card-header" id="headingTwo">
-              <h2 class="mb-0">
-                <button class="accordion-btn btn p-0 border-0 bg-transparent shadow-none text-dark fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-                  aria-expanded="false" aria-controls="collapseTwo" style="font-size:1rem;">
-                  Benefits of Personal Loan
-                </button>
-              </h2>
-            </div>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-              <div class="card-body">
-                Finance Mitra recommends personal loans for those who are in temporary financial emergencies. Personal loans are easily available with all top financial lenders.
-                <ul>
-                  <li>No security required</li>
-                  <li>Loans processed with limited documents</li>
-                  <li>Quick and easy processing</li>
-                  <li>Quick and easy processing</li>
-                  <li>Create an emergency fund</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-header" id="headingThree">
-              <h2 class="mb-0">
-                <button class="accordion-btn btn p-0 border-0 bg-transparent shadow-none text-dark fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree"
-                  aria-expanded="false" aria-controls="collapseThree" style="font-size:1rem;">
-                  Who & When Can Personal Loan Be Taken ?
-                </button>
-              </h2>
-            </div>
-            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-              <div class="card-body">
-               An eligible candidate should be a minimum of 21 years to take a personal loan. The maximum age limit can go up to 60 years for salaried employees and 65 years for non-salaried professionals at the time of maturity. The age limit varies from bank to bank. Minimum income for a personal loan should be between Rs.20,000 to Rs. 25,000. The maximum EMI for a loan will be up to 75% of Net Salary depending upon the organization in which the applicant work.
-              </div>
-              <div class="card-body">
-                A personal loan can be used for any expenses such as medical, home improvements, moving, wedding, debt consolidation, vacation, shortcomings, educational expenses and more.
-              </div>
+          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="card-body">
+              A personal loan is a credit that is granted by banks, NBFCs, online lenders, or other financial
+              institutions for personal use. Personal loans are often unsecured and the credit limits are based on
+              borrower’s existing financial statement and ability to pay. Personal loans are suitable for borrowers
+              with an excellent credit score. A personal loan is an amount borrowed from a lender at a fixed rate of
+              interest over a fixed period.
             </div>
           </div>
         </div>
-
+        <div class="card mb-3">
+          <div class="card-header" id="headingTwo">
+            <h2 class="mb-0">
+              <button class="accordion-btn btn p-0 border-0 bg-transparent shadow-none text-dark fw-semibold collapsed"
+                type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                aria-controls="collapseTwo" style="font-size:1rem;">
+                <span class="icon-toggle">
+                  <i class="fa-solid fa-plus" style="color: #df1e63;"></i>
+                  <i class="fa-solid fa-minus" style="color: #df1e63; display:none;"></i>
+                </span>
+                Benefits of Personal Loan
+              </button>
+            </h2>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="card-body">
+              FiscalMitra recommends personal loans for those who are in temporary financial emergencies. Personal
+              loans are easily available with all top financial lenders.
+              <ul>
+                <li>No security required</li>
+                <li>Loans processed with limited documents</li>
+                <li>Quick and easy processing</li>
+                <li>Quick and easy processing</li>
+                <li>Create an emergency fund</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-3">
+          <div class="card-header" id="headingThree">
+            <h2 class="mb-0">
+              <button class="accordion-btn btn p-0 border-0 bg-transparent shadow-none text-dark fw-semibold collapsed"
+                type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                aria-controls="collapseThree" style="font-size:1rem;">
+                <span class="icon-toggle">
+                  <i class="fa-solid fa-plus" style="color: #df1e63;"></i>
+                  <i class="fa-solid fa-minus" style="color: #df1e63; display:none;"></i>
+                </span>
+                Who & When Can Personal Loan Be Taken ?
+              </button>
+            </h2>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+            <div class="card-body">
+              An eligible candidate should be a minimum of 21 years to take a personal loan. The maximum age limit can
+              go up to 60 years for salaried employees and 65 years for non-salaried professionals at the time of
+              maturity. The age limit varies from bank to bank. Minimum income for a personal loan should be between
+              Rs.20,000 to Rs. 25,000. The maximum EMI for a loan will be up to 75% of Net Salary depending upon the
+              organization in which the applicant work.
+            </div>
+            <div class="card-body">
+              A personal loan can be used for any expenses such as medical, home improvements, moving, wedding, debt
+              consolidation, vacation, shortcomings, educational expenses and more.
+            </div>
+          </div>
+        </div>
+        <div class="card mb-3">
+          <div class="card-header" id="headingFour">
+            <h2 class="mb-0">
+              <button class="accordion-btn btn p-0 border-0 bg-transparent shadow-none text-dark fw-semibold collapsed"
+                type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
+                aria-controls="collapseFour" style="font-size:1rem;">
+                <span class="icon-toggle">
+                  <i class="fa-solid fa-plus" style="color: #df1e63;"></i>
+                  <i class="fa-solid fa-minus" style="color: #df1e63; display:none;"></i>
+                </span>
+                Characteristics of Personal Loan
+              </button>
+            </h2>
+          </div>
+          <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+            <div class="card-body">
+              Personal loans are taken when you need money to meet your emergency requirements and you can pay it
+              back at an affordable interest rate. Here are the characteristics of a personal loan.
+            </div>
+            <ul>
+              <li>They are unsecured which means you don’t need to risk your assets to obtain the loan</li>
+              <li>Interest rates are lesser than credit card or cash advance loans</li>
+              <li>Personal loans can be used for any expenses without showing documents of proof</li>
+              <li>A personal loan can be used for debt consolidation where you can combine all your debt into one
+                loan</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="accordion mt-3" id="accordionExampleRow" style="max-width:900px; margin-left:auto; margin-right:auto;">
+        <div style="gap: 5rem;" class="d-flex justify-content-center flex-wrap">
+          <div class="card mb-3" style="min-width:320px; max-width:400px; flex:1 1 320px;">
+            <div class="card-header" id="headingFive">
+              <h2 class="mb-0">
+                <button class="accordion-btn btn p-0 border-0 bg-transparent shadow-none text-dark fw-semibold collapsed"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false"
+                  aria-controls="collapseFive" style="font-size:1rem;">
+                  <span class="icon-toggle">
+                    <i class="fa-solid fa-plus" style="color: #df1e63;"></i>
+                    <i class="fa-solid fa-minus" style="color: #df1e63; display:none;"></i>
+                  </span>
+                  Why Us
+                </button>
+              </h2>
+            </div>
+            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExampleRow">
+              <div class="card-body">
+                At FiscalMitra, we help you save time, money, and energy with our expert service to avail of the personal
+                loan you want. Whether you are hoping to meet your unexpected personal expenses, increase the cash flow
+                for your business, or close your existing loans, we understand the difficulties of the long and stressful
+                loan process.
+              </div>
+              <div class="card-body">
+                By choosing us, you choose a financial expert that tailors your needs and requirements. To us, you are
+                someone whom we want to help reach the goal. Our friendly financial team can help through the entire
+                process. Whether you want assistance in the application process, or need guidance to find personal loans
+                at the lowest interest rate, we’ve always got your back!
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3" style="min-width:320px; max-width:400px; flex:1 1 320px;">
+            <div class="card-header" id="headingSix">
+              <h2 class="mb-0">
+                <button class="accordion-btn btn p-0 border-0 bg-transparent shadow-none text-dark fw-semibold collapsed"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false"
+                  aria-controls="collapseSix" style="font-size:1rem;">
+                  <span class="icon-toggle">
+                    <i class="fa-solid fa-plus" style="color: #df1e63;"></i>
+                    <i class="fa-solid fa-minus" style="color: #df1e63; display:none;"></i>
+                  </span>
+                  Salaried Professionals
+                </button>
+              </h2>
+            </div>
+            <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExampleRow">
+              <div class="card-body">
+              </div>
+              <ul>
+                <li>Proof of Identity – Driving License/Voters ID/Permanent Account Number (PAN Card)/Passport/Aadhar Card
+                </li>
+                <li>Address Proof – Rental Agreement/Electricity Bill/Utility Bill/Passport/Bank
+                  Passbook/Government-authorized Identity proof</li>
+                <li>Pay Slip and Bank statement – Authorized payslips/ bank account where income is credited</li>
+                <li>Latest Form 16</li>
+                <li>2 Passport size photographs</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+  </div>
+
+  <div class="container text-muted">
+    <h3 class="text-dark p-3">FAQ's -</h3>
+    <b>Q1. What can I use a personal loan for?</b>
+    <p class="text-muted">A personal loan can be used for almost any type of expense ranging from big ticket appliance
+      purchases and home renovations to luxury vacations and debt consolidation. Some other cases where personal loans
+      may be useful include payment to unexpected medical bills, investment in business, fixing your car, down payment
+      of new house and much more.</p>
+    <b>Q2. Am I eligible for personal loan?</b>
+    <p class="text-muted">You must have a regular source of income to avail a personal loan whether you are a salaried
+      individual, self-employed business person or a professional. A person’s eligibility is also affected by the
+      company he/she is employed with, his/her credit history his/her residential location and other factors as per the
+      lender’s criteria.</p>
+    <b>Q3. What are the mandatory documents required in applying for a Personal Loan?</b>
+    <p class="text-muted">-The mandatory documents are:</p>
+    <ul>
+      <li>Bank Statements for the last three months</li>
+      <li>Salary Slips for the last three months</li>
+      <li>Address Proof and Identity Proof documents</li>
+    </ul>
+    <b>Q4.Do I need to provide any security or collateral or guarantors?</b>
+    <p class="text-muted">No, for Personal Loan you don’t need to provide any security, collateral or guarantors.</p>
+    <b>Q5. How is the maximum loan amount decided?</b>
+    <p class="text-muted">When calculating the maximum personal loan amount in case of salaried people, the
+      bank/financial institution takes care that the EMI does not exceed 30% to40% of the applicant’s take home salary.
+      Any existing loans that are being serviced by the applicant are also considered when calculating the personal loan
+      amount. And, for the self employed, the loan value is determined on the basis of the profit earned as per the most
+      recent acknowledged Profit/Loss statement, while taking into account any additional liabilities (such as current
+      loans for business etc.) that the applicant might have.</p>
+    <b>Q6. What is the tenure of a personal loan?</b>
+    <p class="text-muted">Personal loans feature tenure of 1 year to 5 years or 12 to 60 months. In rare cases, shorter
+      or longer personal loan tenures may be allowed by the borrower on a case by case basis.</p>
+    <b>Q7. What What is the minimum and maximum loan amount?</b>
+    <p class="text-muted">We provide Personal Loans from a minimum of ₹ 75,000 to a maximum of ₹ 25,00,000/- depending
+      on your eligibility.</p>
+    <b>Q8.Can I get a Personal Loan with a low CIBIL score?</b>
+    <p class="text-muted">It is important to have a good CIBIL score. But this should not stop you from applying for a
+      Personal Loan. Approval of Personal Loans depends on your ability to repay.</p>
+    <b>Q9.Will I get a loan with a low CIBIL score?</b>
+    <p class="text-muted">If you need a Personal Loan and have a low CIBIL score, you have the option to take a joint
+      loan with your spouse or parent. However, approval of Personal Loans depends on your ability to repay.</p>
+    <b>Q10.How does credit report impact Personal Loan approval process?</b>
+    <p class="text-muted">Credit report provides details on your financial status and your ability to repay a Personal
+      Loan. This helps us evaluate your financial history. A good credit report with a score of 750 will help you take a
+      loan easily.</p>
+    <b>Q11.Do you have a Personal Loan transfer facility?</b>
+    <p class="text-muted">Yes, you can get your Personal Loan transferred from one Bank/NBFC to another Bank with lower
+      ROI.</p>
+    <b>Q12.How much time does it take for the Personal loan to be disbursed?</b>
+    <p class="text-muted">Once we have all your documents with us and the verification process is completed, it
+      generally takes about 72 hours for the Personal Loan amount to be credited to your bank account.</p>
   </div>
   <!-- Details End -->
 
@@ -584,8 +752,22 @@
   </div>
   <!-- footer end -->
 
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+  <script src="script.js"></script>
 
+  <script>
+const scriptURL = 'https://script.google.com/macros/s/AKfycbz0fv4jYsc2uc_Jx5GlFWW1IG097S7g4m1-xZahZwKcINYJsjuXNDImWuAWRiEYJLQ/exec'; // Replace with your Apps Script Web App URL
+const form = document.getElementById('personalLoanForm');
+
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+    .then(response => {
+      alert("Thanks for submitting your details!");
+      form.reset();
+    })
+    .catch(error => alert("Something went wrong. Please try again later."));
+});
+</script>
+</body>
 </html>

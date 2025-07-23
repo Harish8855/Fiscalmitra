@@ -91,64 +91,201 @@
         <h1 class="fw-bold">Home Loan starting @6.70%*</h1>
         <h3 class="fw-bold">Request Quote Now</h3>
         <p>Easy to apply for a loan with us, Once you have complete this form.</p>
-        <form>
+        <form id="homeLoanForm">
           <div class="row g-3">
             <div class="col-md-4">
               <label class="form-label fw-semibold">Service Type</label>
-              <select class="form-select" required>
+              <select class="form-select" name="service_type" required>
                 <option selected disabled>Select Service Type</option>
-                <option>Home Loan</option>
-                <option>Car Loan</option>
-                <option>Personal Loan</option>
+                <option>Salaried</option>
+                <option>Business</option>
               </select>
             </div>
             <div class="col-md-4">
               <label class="form-label fw-semibold">Enter loan amount</label>
-              <input type="text" class="form-control" placeholder="₹ Enter loan amount" required>
+              <input type="text" class="form-control" name="loan_amount" placeholder="₹ Enter loan amount" required>
             </div>
             <div class="col-md-4">
               <label class="form-label fw-semibold">Salary</label>
-              <input type="text" class="form-control" placeholder="₹ Salary" required>
+              <input type="text" class="form-control" name="salary" placeholder="₹ Salary" required>
             </div>
             <div class="col-md-4">
               <label class="form-label fw-semibold">Enter your resident postal code</label>
-              <input type="text" class="form-control" placeholder="Enter your resident postal code" required>
+              <input type="text" class="form-control" name="postal_code" placeholder="Enter your resident postal code"
+                required>
             </div>
             <div class="col-md-4">
               <label class="form-label fw-semibold">Enter your company name</label>
-              <input type="text" class="form-control" placeholder="Enter your company name">
+              <input type="text" class="form-control" name="company_name" placeholder="Enter your company name">
             </div>
             <div class="col-md-4">
               <label class="form-label fw-semibold">Select type of the company</label>
-              <input type="text" class="form-control" placeholder="Sole proprietorship">
+              <input type="text" class="form-control" name="company_type" placeholder="Sole proprietorship">
             </div>
             <div class="col-md-4">
               <label class="form-label fw-semibold">Current account bank name</label>
-              <select class="form-select">
-                <option selected disabled>Select Bank Name</option>
-                <option>HDFC</option>
-                <option>ICICI</option>
-                <option>SBI</option>
+              <select class="form-select" name="bank_name">
+                <option value="" style="display:none;">Select Bank</option>
+                <option value="Australia and New Zealand Banking">Australia and New Zealand Banking</option>
+                <option value="AB Bank Ltd.">AB Bank Ltd.</option>
+                <option value="Abhyudaya Co-op Bank Ltd">Abhyudaya Co-op Bank Ltd</option>
+                <option value="Abu Dhabi Commercial Bank Ltd">Abu Dhabi Commercial Bank Ltd</option>
+                <option value="Ahmedabad Mercantile Co-op Bank">Ahmedabad Mercantile Co-op Bank</option>
+                <option value="Allahabad Bank">Allahabad Bank</option>
+                <option value="Andhra Bank">Andhra Bank</option>
+                <option value="Antwerp Diamond Bank Mumbai">Antwerp Diamond Bank Mumbai</option>
+                <option value="Axis Bank">Axis Bank</option>
+                <option value="Bank Internasional Indonesia">Bank Internasional Indonesia</option>
+                <option value="Bank Of America">Bank Of America</option>
+                <option value="Bank Of Bahrain And Kuwait">Bank Of Bahrain And Kuwait</option>
+                <option value="Bank of Baroda">Bank of Baroda</option>
+                <option value="Bank Of Ceylon">Bank Of Ceylon</option>
+                <option value="Bank of India">Bank of India</option>
+                <option value="Bank Of Maharashtra">Bank Of Maharashtra</option>
+                <option value="Bank Of Nova Scotia">Bank Of Nova Scotia</option>
+                <option value="Bank Of Tokyo-Mitsubishi Ufj Ltd">Bank Of Tokyo-Mitsubishi Ufj Ltd</option>
+                <option value="Barclays Bank Plc">Barclays Bank Plc</option>
+                <option value="Bassein Catholic Co-op Bank Ltd">Bassein Catholic Co-op Bank Ltd</option>
+                <option value="Bharat Co-op Bank (Mumbai) Ltd">Bharat Co-op Bank (Mumbai) Ltd</option>
+                <option value="BNP Paribas">BNP Paribas</option>
+                <option value="Bombay Mercantile Co-operative bank Limited">Bombay Mercantile Co-operative bank
+                  Limited
+                </option>
+                <option value="Canara Bank">Canara Bank</option>
+                <option value="Catholic Syrian Bank Ltd">Catholic Syrian Bank Ltd</option>
+                <option value="Central Bank of India">Central Bank of India</option>
+                <option value="Chinatrust Commercial Bank">Chinatrust Commercial Bank</option>
+                <option value="Citibank India">Citibank India</option>
+                <option value="Citizencredit Co-op Bank Ltd">Citizencredit Co-op Bank Ltd</option>
+                <option value="City Union Bank Ltd">City Union Bank Ltd</option>
+                <option value="Commonwealth Bank of Australia">Commonwealth Bank of Australia</option>
+                <option value="Corporation Bank">Corporation Bank</option>
+                <option value="Cosmos Co-op Bank Ltd">Cosmos Co-op Bank Ltd</option>
+                <option value="Credit Agricole Corp and Investment Bank">Credit Agricole Corp and Investment Bank
+                </option>
+                <option value="DBS Bank">DBS Bank</option>
+                <option value="Dena Bank">Dena Bank</option>
+                <option value="Deutsche Bank Ag">Deutsche Bank Ag</option>
+                <option value="Development Credit Bank">Development Credit Bank</option>
+                <option value="Dhanlaxmi Bank Ltd">Dhanlaxmi Bank Ltd</option>
+                <option value="Dicgc">Dicgc</option>
+                <option value="Doha Bank">Doha Bank</option>
+                <option value="Dombivli Nagari Sahakari Bank Ltd">Dombivli Nagari Sahakari Bank Ltd</option>
+                <option value="Emirates NBD Bank  PJSC">Emirates NBD Bank PJSC</option>
+                <option value="Export-Import Bank of India">Export-Import Bank of India</option>
+                <option value="Federal Bank Ltd">Federal Bank Ltd</option>
+                <option value="Firstrand Bank Ltd">Firstrand Bank Ltd</option>
+                <option value="Greater Bombay Co-op Bank Ltd">Greater Bombay Co-op Bank Ltd</option>
+                <option value="Group Limited&quot;">Group Limited"</option>
+                <option value="HDFC Bank">HDFC Bank</option>
+                <option value="HSBC">HSBC</option>
+                <option value="HSBC Bank Oman S.A.O.G.">HSBC Bank Oman S.A.O.G.</option>
+                <option value="ICICI Bank">ICICI Bank</option>
+                <option value="IDBI Bank">IDBI Bank</option>
+                <option value="IDFC FIRST BANK LIMITED">IDFC FIRST BANK LIMITED</option>
+                <option value="IFCI Factors Limited">IFCI Factors Limited</option>
+                <option value="Indian Bank">Indian Bank</option>
+                <option value="Indian Overseas Bank">Indian Overseas Bank</option>
+                <option value="IndusInd Bank Ltd.">IndusInd Bank Ltd.</option>
+                <option value="Industrial and Commercial Bank of China Ltd.">Industrial and Commercial Bank of China
+                  Ltd.</option>
+                <option value="Industrial Bank of  Korea">Industrial Bank of Korea</option>
+                <option value="ING Vysya Bank">ING Vysya Bank</option>
+                <option value="Jammu &amp; Kashmir Bank Ltd.">Jammu &amp; Kashmir Bank Ltd.</option>
+                <option value="Janakalyan Sahakari Bank Ltd">Janakalyan Sahakari Bank Ltd</option>
+                <option value="Janata Sahkari Bank Ltd Pune">Janata Sahkari Bank Ltd Pune</option>
+                <option value="Jpmorgan Chase Bank">Jpmorgan Chase Bank</option>
+                <option value="Kalupur Commercial Co-op Bank Ltd">Kalupur Commercial Co-op Bank Ltd</option>
+                <option value="Kalyan Janata Sahakari Bank Ltd">Kalyan Janata Sahakari Bank Ltd</option>
+                <option value="Kapole Co-op Bank">Kapole Co-op Bank</option>
+                <option value="Karnataka Bank Ltd.">Karnataka Bank Ltd.</option>
+                <option value="Karnataka State Co-op Apex Bank">Karnataka State Co-op Apex Bank</option>
+                <option value="Karur Vysya Bank">Karur Vysya Bank</option>
+                <option value="KEB  Hana Bank">KEB Hana Bank</option>
+                <option value="Kotak Mahindra Bank">Kotak Mahindra Bank</option>
+                <option value="Krung Thai Bank PCL Mumbai">Krung Thai Bank PCL Mumbai</option>
+                <option value="Lakshmi Vilas Bank Ltd">Lakshmi Vilas Bank Ltd</option>
+                <option value="Mahanagar Co-op Bank Ltd">Mahanagar Co-op Bank Ltd</option>
+                <option value="Maharashtra State Co-operative Bank Limited">Maharashtra State Co-operative Bank
+                  Limited
+                </option>
+                <option value="Mashreq Bank Psc">Mashreq Bank Psc</option>
+                <option value="Mehsana Urban Co-op Bank Ltd">Mehsana Urban Co-op Bank Ltd</option>
+                <option value="Mizuho Corporate Bank Ltd">Mizuho Corporate Bank Ltd</option>
+                <option value="Nainital Bank Ltd">Nainital Bank Ltd</option>
+                <option value="National Australia Bank">National Australia Bank</option>
+                <option value="National Bank of Abu Dhabi PJSC">National Bank of Abu Dhabi PJSC</option>
+                <option value="New India Co-op Bank Ltd">New India Co-op Bank Ltd</option>
+                <option value="Nkgsb Co-op Bank Ltd">Nkgsb Co-op Bank Ltd</option>
+                <option value="Nutan Nagarik Sahakari Bank Ltd">Nutan Nagarik Sahakari Bank Ltd</option>
+                <option value="Oman International Bank Saog">Oman International Bank Saog</option>
+                <option value="Oriental Bank of Commerce">Oriental Bank of Commerce</option>
+                <option value="Parsik Janata Sahakari Bank Ltd">Parsik Janata Sahakari Bank Ltd</option>
+                <option value="Punjab &amp; Sind Bank">Punjab &amp; Sind Bank</option>
+                <option value="Punjab and Maharashtra Bank Ltd.">Punjab and Maharashtra Bank Ltd.</option>
+                <option value="Punjab National Bank">Punjab National Bank</option>
+                <option value="Qatar National Bank(QPSC)">Qatar National Bank(QPSC)</option>
+                <option value="Rabobank International">Rabobank International</option>
+                <option value="Rajkot Nagarik Sahakari Bank Ltd">Rajkot Nagarik Sahakari Bank Ltd</option>
+                <option value="Ratnakar Bank Ltd">Ratnakar Bank Ltd</option>
+                <option value="Reserve Bank Of India">Reserve Bank Of India</option>
+                <option value="Royal bank of scotland">Royal bank of scotland</option>
+                <option value="Saraswat Co-operative Bank Ltd.">Saraswat Co-operative Bank Ltd.</option>
+                <option value="Sberbank">Sberbank</option>
+                <option value="SBI Global Factors Ltd">SBI Global Factors Ltd</option>
+                <option value="Shamrao Vithal Co-op Bank Ltd">Shamrao Vithal Co-op Bank Ltd</option>
+                <option value="Shinhan Bank">Shinhan Bank</option>
+                <option value="Societe Generale">Societe Generale</option>
+                <option value="Sonali Bank Ltd.">Sonali Bank Ltd.</option>
+                <option value="South Indian Bank">South Indian Bank</option>
+                <option value="Standard Chartered Bank">Standard Chartered Bank</option>
+                <option value="State Bank Of Bikaner And Jaipur">State Bank Of Bikaner And Jaipur</option>
+                <option value="State Bank of Hyderabad">State Bank of Hyderabad</option>
+                <option value="State Bank of India">State Bank of India</option>
+                <option value="State Bank Of Mauritius Ltd">State Bank Of Mauritius Ltd</option>
+                <option value="State Bank of Mysore">State Bank of Mysore</option>
+                <option value="State Bank Of Patiala">State Bank Of Patiala</option>
+                <option value="State Bank of Saurashtra">State Bank of Saurashtra</option>
+                <option value="State Bank Of Travancore">State Bank Of Travancore</option>
+                <option value="Sumitomo Mitsui Banking Corporation">Sumitomo Mitsui Banking Corporation</option>
+                <option value="Surat Peoples Co-op Bank Ltd">Surat Peoples Co-op Bank Ltd</option>
+                <option value="Syndicate Bank">Syndicate Bank</option>
+                <option value="Tamilnad Mercantile Bank Ltd">Tamilnad Mercantile Bank Ltd</option>
+                <option value="Thane Janta Sahakari Bank, Ltd.">Thane Janta Sahakari Bank, Ltd.</option>
+                <option value="The Karad Urban Co-op Bank Ltd">The Karad Urban Co-op Bank Ltd</option>
+                <option value="The Nasik Merchants Co-op Bank Ltd">The Nasik Merchants Co-op Bank Ltd</option>
+                <option value="UBS AG">UBS AG</option>
+                <option value="UCO Bank">UCO Bank</option>
+                <option value="Union Bank of India">Union Bank of India</option>
+                <option value="United Bank of India">United Bank of India</option>
+                <option value="United Overseas Bank">United Overseas Bank</option>
+                <option value="Vijaya Bank">Vijaya Bank</option>
+                <option value="West Bengal State Co-op Bank Ltd">West Bengal State Co-op Bank Ltd</option>
+                <option value="Westpac Banking Corporation">Westpac Banking Corporation</option>
+                <option value="Woori Bank">Woori Bank</option>
+                <option value="Yes Bank">Yes Bank</option>
               </select>
             </div>
             <div class="col-md-4">
               <label class="form-label fw-semibold">Enter full name, Ex: Firstname Lastname</label>
-              <input type="text" class="form-control" placeholder="Enter full name, Ex: Firstname Lastname" required>
+              <input type="text" class="form-control" name="full_name"
+                placeholder="Enter full name, Ex: Firstname Lastname" required>
             </div>
             <div class="col-md-4">
               <label class="form-label fw-semibold">Enter your email id (Ex: some@something.com)</label>
-              <input type="email" class="form-control" placeholder="Enter your email id (Ex: some@something.com)"
-                required>
+              <input type="email" class="form-control" name="email"
+                placeholder="Enter your email id (Ex: some@something.com)" required>
             </div>
             <div class="col-md-4">
               <label class="form-label fw-semibold">Enter 10-digit mobile number.</label>
-              <input type="text" class="form-control" placeholder="Enter 10-digit mobile number." required>
+              <input type="text" class="form-control" name="mobile" placeholder="Enter 10-digit mobile number."
+                required>
             </div>
           </div>
           <div style="font-size: 0.8rem;" class="mt-4 mb-2">
-            I have read and agreed to <a href="tos.html" style="color:#e91e63; font-weight:500;">Terms & Conditions</a>
-            and
-            authorized FiscalMitra to contact me. This will override registry on DND / NDNC. I also hereby appoint
+            I have read and agreed to <a href="tos.html" style="color:rgb(233, 30, 99); font-weight:500;">Terms &
+              Conditions</a>
+            and authorized FiscalMitra to contact me. This will override registry on DND / NDNC. I also hereby appoint
             FiscalMitra as my authorised representative to receive my credit information from Cibil/ Equifax/ Experian/
             Highmark (bureau). <b>By clicking submit you are agreeing to the Terms and Conditions.</b>
           </div>
@@ -168,14 +305,12 @@
 
           <h2>Home Loan</h2>
           <p class="text-muted"><b>We help you own a home.</b><br>
-
             At FiscalMitra, we know what owning a home means to our customers. Therefore, we offer pocket-friendly
             loan eligibility options that can be processed within hours for a desired property for salaried,
             self-employed, NRIs, and PIO customers. Just give us a call or walk into our office for grabbing the right
             deal.
           </p><br>
           <p class="text-muted"><b>Eligibility</b>
-
           </p>
           <ul>
             <li>Indian resident, Non-Indian resident, Person of Indian Origin</li>
@@ -183,8 +318,6 @@
             <li>Loan Tenure shouldn’t exceed to 30 years</li>
             <li>Loan Amount shouldn’t exceed 5 cr.</li>
           </ul>
-
-
           <b>Documents Required:</b><br>
 
           <b>1. SALARIED</b><br>
@@ -349,6 +482,20 @@
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwhn0c932L_JfdynqfrmTTRsui8N24Ig5GiTKAkR_9abtzsntemxajyDSzIep_vnz4/exec'; // Replace with your Apps Script Web App URL
+    const form = document.getElementById('homeLoanForm');
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+          alert("Thanks for submitting your details!");
+          form.reset();
+        })
+        .catch(error => alert("Something went wrong. Please try again later."));
+    });
+  </script>
 </body>
 
 </html>

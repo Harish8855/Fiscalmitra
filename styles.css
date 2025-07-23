@@ -35,7 +35,7 @@ b {
   font-size: 0.9rem;
 }
 
-.text-muted{
+.text-muted {
   font-size: 0.8rem;
 }
 
@@ -309,7 +309,7 @@ p {
 }
 
 .footer-link a:hover {
-  color: var(--secondary-color);
+  /* color: var(--secondary-color); */
   text-decoration: underline;
 }
 
@@ -323,20 +323,91 @@ p {
   transition: transform 0.3s ease;
   color: var(--secondary-color);
 }
+
 /* footer end */
 
 /* Background */
- .HL-bg {
-      background-image: url("Assets/HL.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      min-height: 300px;
-      width: 100%;
+.HL-bg {
+  background-image: url("Assets/HL.jpg"); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 300px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.casual-bg {
+  background-color: rgb(239, 243, 245);
+}
+
+/* Form */
+.form-label {
+  font-size: 0.8rem;
+}
+
+/* Card */
+    .benefit-card {
+      border: 1px solid #e3eafc;
+      box-shadow: 0 8px 24px 0 rgba(29, 58, 89, 0.07);
+      border-radius: 0;
+      transition: box-shadow 0.2s;
+      background: #fff;
+      min-height: 180px;
       display: flex;
+      flex-direction: column;
+      justify-content: center;
       align-items: center;
     }
 
-    .casual-bg{
-      background-color:rgb(239, 243, 245);
+    .benefit-card {
+      box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.15);
+    }
+
+    .benefit-card:hover {
+      box-shadow: 0 8px 32px 0 rgba(255, 193, 7, 0.7), 0 4px 16px 0 rgba(0, 0, 0, 0.15);
+    }
+
+    .benefit-card .card-title {
+      color: #1d3a59;
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+    }
+
+    .benefit-card .card-text {
+      color: #7b7b93;
+      font-size: 1rem;
+      font-weight: 400;
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 991.98px) {
+      .benefit-card {
+        min-height: 200px;
+      }
+    }
+
+    @media (max-width: 767.98px) {
+      .benefit-card {
+        min-height: 0;
+      }
+    }
+
+    .benefits-title {
+      color: #1d3a59;
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.5px;
+    }
+
+    .benefits-desc {
+      color: #7b7b93;
+      font-size: 1.15rem;
+      font-weight: 400;
+      margin-bottom: 2.5rem;
     }

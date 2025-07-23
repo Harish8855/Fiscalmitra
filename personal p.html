@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles.css">
@@ -66,16 +67,14 @@
   </nav>
   <!-- Navbar End -->
 
- <!-- Form -->
- <div class="container-fluid HL-bg">
+  <!-- Form -->
+  <div class="container-fluid HL-bg">
     <div class="container">
       <div class="my-5">
-        <h1 class="fw-bold">Personal Loans starting @10.50%*</h1>
-        <h3 class="fw-bold">Request Quote Now</h3>
-        <p>Easy to apply for a loan with us, Once you have complete this form.</p>
-        <form>
+        <h1 class="fw-bold">Professional Loans starting @10.50%*</h1>
+        <form id="professionalLoanForm">
           <div class="row g-3">
-            <div class="col-md-4">
+            <!-- <div class="col-md-4">
               <label class="form-label fw-semibold">Service Type</label>
               <select class="form-select" required>
                 <option selected disabled>Select Service Type</option>
@@ -83,48 +82,196 @@
                 <option>Car Loan</option>
                 <option>Personal Loan</option>
               </select>
-            </div>
+            </div> -->
             <div class="col-md-4">
               <label class="form-label fw-semibold">Enter loan amount</label>
-              <input type="text" class="form-control" placeholder="₹ Enter loan amount" required>
+              <input type="text" class="form-control" name="loan_amount" placeholder="₹ Enter loan amount" required>
             </div>
             <div class="col-md-4">
-              <label class="form-label fw-semibold">Salary</label>
-              <input type="text" class="form-control" placeholder="₹ Salary" required>
+              <label class="form-label fw-semibold">Enter Annual Income</label>
+              <input type="text" class="form-control" name="annual_income" placeholder="₹ Enter Annual Income" required>
             </div>
             <div class="col-md-4">
               <label class="form-label fw-semibold">Enter your resident postal code</label>
-              <input type="text" class="form-control" placeholder="Enter your resident postal code" required>
+              <input type="text" class="form-control" name="postal_code" placeholder="Enter your resident postal code" required>
             </div>
             <div class="col-md-4">
-              <label class="form-label fw-semibold">Enter your company name</label>
-              <input type="text" class="form-control" placeholder="Enter your company name">
+              <label class="form-label fw-semibold">Enter Your Profession</label>
+              <select class="form-select" name="profession" required>
+                <option selected disabled>Select Profession</option>
+                <option>Doctor</option>
+                <option>Chartered Accountant (CA)</option>
+                <option>Architech</option>
+                <option>Company Secretory (CS)</option>
+                <option>Cost Accountant (ICWA)</option>
+              </select>
             </div>
             <div class="col-md-4">
-              <label class="form-label fw-semibold">Select type of the company</label>
-              <input type="text" class="form-control" placeholder="Sole proprietorship">
+              <label class="form-label fw-semibold">Select Year in Current Profession</label>
+              <select class="form-select" name="years_in_profession" required>
+                <option selected disabled>Select Year</option>
+                <option>0-1 yr</option>
+                <option>1-2 yr</option>
+                <option>2-3 yr</option>
+                <option>3-4 yr</option>
+                <option>5+ yr</option>
+              </select>
             </div>
-            <div class="col-md-4">
-              <label class="form-label fw-semibold">Current account bank name</label>
-              <select class="form-select">
-                <option selected disabled>Select Bank Name</option>
-                <option>HDFC</option>
-                <option>ICICI</option>
-                <option>SBI</option>
+            <div class="col-md-4 mt-3">
+              <label class="form-label fw-semibold">Select Your Primary Bank</label>
+              <select name="bank_name" class="form-control input-md" required>
+                 <option value="" style="display:none;">Select Bank</option>
+                <option value="Australia and New Zealand Banking">Australia and New Zealand Banking</option>
+                <option value="AB Bank Ltd.">AB Bank Ltd.</option>
+                <option value="Abhyudaya Co-op Bank Ltd">Abhyudaya Co-op Bank Ltd</option>
+                <option value="Abu Dhabi Commercial Bank Ltd">Abu Dhabi Commercial Bank Ltd</option>
+                <option value="Ahmedabad Mercantile Co-op Bank">Ahmedabad Mercantile Co-op Bank</option>
+                <option value="Allahabad Bank">Allahabad Bank</option>
+                <option value="Andhra Bank">Andhra Bank</option>
+                <option value="Antwerp Diamond Bank Mumbai">Antwerp Diamond Bank Mumbai</option>
+                <option value="Axis Bank">Axis Bank</option>
+                <option value="Bank Internasional Indonesia">Bank Internasional Indonesia</option>
+                <option value="Bank Of America">Bank Of America</option>
+                <option value="Bank Of Bahrain And Kuwait">Bank Of Bahrain And Kuwait</option>
+                <option value="Bank of Baroda">Bank of Baroda</option>
+                <option value="Bank Of Ceylon">Bank Of Ceylon</option>
+                <option value="Bank of India">Bank of India</option>
+                <option value="Bank Of Maharashtra">Bank Of Maharashtra</option>
+                <option value="Bank Of Nova Scotia">Bank Of Nova Scotia</option>
+                <option value="Bank Of Tokyo-Mitsubishi Ufj Ltd">Bank Of Tokyo-Mitsubishi Ufj Ltd</option>
+                <option value="Barclays Bank Plc">Barclays Bank Plc</option>
+                <option value="Bassein Catholic Co-op Bank Ltd">Bassein Catholic Co-op Bank Ltd</option>
+                <option value="Bharat Co-op Bank (Mumbai) Ltd">Bharat Co-op Bank (Mumbai) Ltd</option>
+                <option value="BNP Paribas">BNP Paribas</option>
+                <option value="Bombay Mercantile Co-operative bank Limited">Bombay Mercantile Co-operative bank
+                  Limited
+                </option>
+                <option value="Canara Bank">Canara Bank</option>
+                <option value="Catholic Syrian Bank Ltd">Catholic Syrian Bank Ltd</option>
+                <option value="Central Bank of India">Central Bank of India</option>
+                <option value="Chinatrust Commercial Bank">Chinatrust Commercial Bank</option>
+                <option value="Citibank India">Citibank India</option>
+                <option value="Citizencredit Co-op Bank Ltd">Citizencredit Co-op Bank Ltd</option>
+                <option value="City Union Bank Ltd">City Union Bank Ltd</option>
+                <option value="Commonwealth Bank of Australia">Commonwealth Bank of Australia</option>
+                <option value="Corporation Bank">Corporation Bank</option>
+                <option value="Cosmos Co-op Bank Ltd">Cosmos Co-op Bank Ltd</option>
+                <option value="Credit Agricole Corp and Investment Bank">Credit Agricole Corp and Investment Bank
+                </option>
+                <option value="DBS Bank">DBS Bank</option>
+                <option value="Dena Bank">Dena Bank</option>
+                <option value="Deutsche Bank Ag">Deutsche Bank Ag</option>
+                <option value="Development Credit Bank">Development Credit Bank</option>
+                <option value="Dhanlaxmi Bank Ltd">Dhanlaxmi Bank Ltd</option>
+                <option value="Dicgc">Dicgc</option>
+                <option value="Doha Bank">Doha Bank</option>
+                <option value="Dombivli Nagari Sahakari Bank Ltd">Dombivli Nagari Sahakari Bank Ltd</option>
+                <option value="Emirates NBD Bank  PJSC">Emirates NBD Bank PJSC</option>
+                <option value="Export-Import Bank of India">Export-Import Bank of India</option>
+                <option value="Federal Bank Ltd">Federal Bank Ltd</option>
+                <option value="Firstrand Bank Ltd">Firstrand Bank Ltd</option>
+                <option value="Greater Bombay Co-op Bank Ltd">Greater Bombay Co-op Bank Ltd</option>
+                <option value="Group Limited&quot;">Group Limited"</option>
+                <option value="HDFC Bank">HDFC Bank</option>
+                <option value="HSBC">HSBC</option>
+                <option value="HSBC Bank Oman S.A.O.G.">HSBC Bank Oman S.A.O.G.</option>
+                <option value="ICICI Bank">ICICI Bank</option>
+                <option value="IDBI Bank">IDBI Bank</option>
+                <option value="IDFC FIRST BANK LIMITED">IDFC FIRST BANK LIMITED</option>
+                <option value="IFCI Factors Limited">IFCI Factors Limited</option>
+                <option value="Indian Bank">Indian Bank</option>
+                <option value="Indian Overseas Bank">Indian Overseas Bank</option>
+                <option value="IndusInd Bank Ltd.">IndusInd Bank Ltd.</option>
+                <option value="Industrial and Commercial Bank of China Ltd.">Industrial and Commercial Bank of China
+                  Ltd.</option>
+                <option value="Industrial Bank of  Korea">Industrial Bank of Korea</option>
+                <option value="ING Vysya Bank">ING Vysya Bank</option>
+                <option value="Jammu &amp; Kashmir Bank Ltd.">Jammu &amp; Kashmir Bank Ltd.</option>
+                <option value="Janakalyan Sahakari Bank Ltd">Janakalyan Sahakari Bank Ltd</option>
+                <option value="Janata Sahkari Bank Ltd Pune">Janata Sahkari Bank Ltd Pune</option>
+                <option value="Jpmorgan Chase Bank">Jpmorgan Chase Bank</option>
+                <option value="Kalupur Commercial Co-op Bank Ltd">Kalupur Commercial Co-op Bank Ltd</option>
+                <option value="Kalyan Janata Sahakari Bank Ltd">Kalyan Janata Sahakari Bank Ltd</option>
+                <option value="Kapole Co-op Bank">Kapole Co-op Bank</option>
+                <option value="Karnataka Bank Ltd.">Karnataka Bank Ltd.</option>
+                <option value="Karnataka State Co-op Apex Bank">Karnataka State Co-op Apex Bank</option>
+                <option value="Karur Vysya Bank">Karur Vysya Bank</option>
+                <option value="KEB  Hana Bank">KEB Hana Bank</option>
+                <option value="Kotak Mahindra Bank">Kotak Mahindra Bank</option>
+                <option value="Krung Thai Bank PCL Mumbai">Krung Thai Bank PCL Mumbai</option>
+                <option value="Lakshmi Vilas Bank Ltd">Lakshmi Vilas Bank Ltd</option>
+                <option value="Mahanagar Co-op Bank Ltd">Mahanagar Co-op Bank Ltd</option>
+                <option value="Maharashtra State Co-operative Bank Limited">Maharashtra State Co-operative Bank
+                  Limited
+                </option>
+                <option value="Mashreq Bank Psc">Mashreq Bank Psc</option>
+                <option value="Mehsana Urban Co-op Bank Ltd">Mehsana Urban Co-op Bank Ltd</option>
+                <option value="Mizuho Corporate Bank Ltd">Mizuho Corporate Bank Ltd</option>
+                <option value="Nainital Bank Ltd">Nainital Bank Ltd</option>
+                <option value="National Australia Bank">National Australia Bank</option>
+                <option value="National Bank of Abu Dhabi PJSC">National Bank of Abu Dhabi PJSC</option>
+                <option value="New India Co-op Bank Ltd">New India Co-op Bank Ltd</option>
+                <option value="Nkgsb Co-op Bank Ltd">Nkgsb Co-op Bank Ltd</option>
+                <option value="Nutan Nagarik Sahakari Bank Ltd">Nutan Nagarik Sahakari Bank Ltd</option>
+                <option value="Oman International Bank Saog">Oman International Bank Saog</option>
+                <option value="Oriental Bank of Commerce">Oriental Bank of Commerce</option>
+                <option value="Parsik Janata Sahakari Bank Ltd">Parsik Janata Sahakari Bank Ltd</option>
+                <option value="Punjab &amp; Sind Bank">Punjab &amp; Sind Bank</option>
+                <option value="Punjab and Maharashtra Bank Ltd.">Punjab and Maharashtra Bank Ltd.</option>
+                <option value="Punjab National Bank">Punjab National Bank</option>
+                <option value="Qatar National Bank(QPSC)">Qatar National Bank(QPSC)</option>
+                <option value="Rabobank International">Rabobank International</option>
+                <option value="Rajkot Nagarik Sahakari Bank Ltd">Rajkot Nagarik Sahakari Bank Ltd</option>
+                <option value="Ratnakar Bank Ltd">Ratnakar Bank Ltd</option>
+                <option value="Reserve Bank Of India">Reserve Bank Of India</option>
+                <option value="Royal bank of scotland">Royal bank of scotland</option>
+                <option value="Saraswat Co-operative Bank Ltd.">Saraswat Co-operative Bank Ltd.</option>
+                <option value="Sberbank">Sberbank</option>
+                <option value="SBI Global Factors Ltd">SBI Global Factors Ltd</option>
+                <option value="Shamrao Vithal Co-op Bank Ltd">Shamrao Vithal Co-op Bank Ltd</option>
+                <option value="Shinhan Bank">Shinhan Bank</option>
+                <option value="Societe Generale">Societe Generale</option>
+                <option value="Sonali Bank Ltd.">Sonali Bank Ltd.</option>
+                <option value="South Indian Bank">South Indian Bank</option>
+                <option value="Standard Chartered Bank">Standard Chartered Bank</option>
+                <option value="State Bank Of Bikaner And Jaipur">State Bank Of Bikaner And Jaipur</option>
+                <option value="State Bank of Hyderabad">State Bank of Hyderabad</option>
+                <option value="State Bank of India">State Bank of India</option>
+                <option value="State Bank Of Mauritius Ltd">State Bank Of Mauritius Ltd</option>
+                <option value="State Bank of Mysore">State Bank of Mysore</option>
+                <option value="State Bank Of Patiala">State Bank Of Patiala</option>
+                <option value="State Bank of Saurashtra">State Bank of Saurashtra</option>
+                <option value="State Bank Of Travancore">State Bank Of Travancore</option>
+                <option value="Sumitomo Mitsui Banking Corporation">Sumitomo Mitsui Banking Corporation</option>
+                <option value="Surat Peoples Co-op Bank Ltd">Surat Peoples Co-op Bank Ltd</option>
+                <option value="Syndicate Bank">Syndicate Bank</option>
+                <option value="Tamilnad Mercantile Bank Ltd">Tamilnad Mercantile Bank Ltd</option>
+                <option value="Thane Janta Sahakari Bank, Ltd.">Thane Janta Sahakari Bank, Ltd.</option>
+                <option value="The Karad Urban Co-op Bank Ltd">The Karad Urban Co-op Bank Ltd</option>
+                <option value="The Nasik Merchants Co-op Bank Ltd">The Nasik Merchants Co-op Bank Ltd</option>
+                <option value="UBS AG">UBS AG</option>
+                <option value="UCO Bank">UCO Bank</option>
+                <option value="Union Bank of India">Union Bank of India</option>
+                <option value="United Bank of India">United Bank of India</option>
+                <option value="United Overseas Bank">United Overseas Bank</option>
+                <option value="Vijaya Bank">Vijaya Bank</option>
+                <option value="West Bengal State Co-op Bank Ltd">West Bengal State Co-op Bank Ltd</option>
+                <option value="Westpac Banking Corporation">Westpac Banking Corporation</option>
+                <option value="Woori Bank">Woori Bank</option>
+                <option value="Yes Bank">Yes Bank</option>
               </select>
             </div>
             <div class="col-md-4">
               <label class="form-label fw-semibold">Enter full name, Ex: Firstname Lastname</label>
-              <input type="text" class="form-control" placeholder="Enter full name, Ex: Firstname Lastname" required>
+              <input type="text" class="form-control" name="full_name" placeholder="Enter full name, Ex: Firstname Lastname" required>
             </div>
             <div class="col-md-4">
               <label class="form-label fw-semibold">Enter your email id (Ex: some@something.com)</label>
-              <input type="email" class="form-control" placeholder="Enter your email id (Ex: some@something.com)"
-                required>
+              <input type="email" class="form-control" name="email" placeholder="Enter your email id (Ex: some@something.com)" required>
             </div>
             <div class="col-md-4">
               <label class="form-label fw-semibold">Enter 10-digit mobile number.</label>
-              <input type="text" class="form-control" placeholder="Enter 10-digit mobile number." required>
+              <input type="text" class="form-control" name="mobile" placeholder="Enter 10-digit mobile number." required>
             </div>
           </div>
           <div style="font-size: 0.8rem;" class="mt-4 mb-2">
@@ -140,7 +287,249 @@
       </div>
     </div>
   </div>
- <!-- Form End -->
+  <!-- Form End -->
+
+  <!-- Card -->
+  <div class="container text-center mt-5 mb-4">
+    <h2 class="benefits-title">Benefits at FiscalMitra ?</h2>
+    <p class="benefits-desc">Tons of benefits with us compare to our competitors.</p>
+    <div class="row justify-content-center g-4">
+      <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 d-flex">
+        <div class="card benefit-card w-100">
+          <div class="card-body">
+            <div class="card-title">Compare & Avail</div>
+            <div class="card-text">Minimum Rates from different financial institutions.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 d-flex">
+        <div class="card benefit-card w-100">
+          <div class="card-body">
+            <div class="card-title">Banking Convenience</div>
+            <div class="card-text">On your Fingertips loans and cards available at door step.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 d-flex">
+        <div class="card benefit-card w-100">
+          <div class="card-body">
+            <div class="card-title">Earn</div>
+            <div class="card-text">Earn Your EMI using our referral based model Click here for more information.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 d-flex">
+        <div class="card benefit-card w-100">
+          <div class="card-body">
+            <div class="card-title">Become</div>
+            <div class="card-text">Partner & earn with zero investment Click here for more information.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Card End -->
+
+  <!-- Details -->
+  <div class="container-fluid casual-bg text-muted">
+    <div class="container">
+      <h2 class="text-dark pt-3">Profession Loan</h2>
+      <p class="text-muted">Professional loan rescues professionals who are in dire need of funding their existence
+        venture or looking ahead to expand their portfolio. Such loan schemes are useful for professionals wanting to
+        get over the liquidity issues to avert any usage from their savings.
+        Whether you are a doctor, architect, engineer or a chartered accountant, we understand all your unique financial
+        needs. That’s why, we offer special plans to professionals who want to fly higher at affordable interest rates.
+      </p>
+      <b>Eligibility</b>
+      <ul>
+        <li>Age limit from 21 to 65 years</li>
+        <li>Only for qualified professional in practice for minimum 2 years</li>
+        <li>Licensed as a self-employed professional with any central body or state</li>
+        <li>Loan amount up to Rs. 75 lakhs</li>
+        <li>No prepayment charges along with another cost for the loan</li>
+        <li>No foreclosure charges for the professional loan</li>
+        <li>Professionals can choose ECS, PCD, and EMI for closing the loan</li>
+      </ul>
+      <b>Documents Required:</b> <br>
+      <b>SELF-EMPLOYED</b>
+      <ul>
+        <li>Documents of professional degree</li>
+        <li>PAN card of firm, company or individual</li>
+        <li>Documents of KYC like passport, Aadhar card, driving license, Voters ID Card, or PAN card</li>
+        <li>Residential proof like passport, Aadhar card, driving license, or Voters ID card</li>
+        <li>Bank Account statement of last 6 months</li>
+        <li>Income tax computation, profit and loss account, and balance sheet, of the last 2 years along with the
+          latest ITR attested by a chartered accountant</li>
+        <li>Proof regarding the continuation of the business like the Trade license, ITR, Sales tax certificate, or
+          establishment certificate</li>
+        <li>Apart from all these, other documents might be required if asked by the lender.</li>
+      </ul>
+      <b>Benefits of Professional loan from FiscalMitra</b>
+      <ul>
+        <li>No security or collateral</li>
+        <li>Reasonable rate of interest</li>
+        <li>Minimal documentation</li>
+        <li>Simple and structured loan process</li>
+        <li>Quick approval and disbursal</li>
+        <li>Flexible repayment tenure</li>
+      </ul>
+
+
+      <div class="accordion" id="accordionExampleMain">
+        <div class="card mb-3">
+          <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+              <button class="accordion-btn btn p-0 border-0 bg-transparent shadow-none text-dark fw-semibold collapsed"
+                type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                aria-controls="collapseOne" style="font-size:1rem;">
+                <span class="icon-toggle">
+                  <i class="fa-solid fa-plus" style="color: #df1e63;"></i>
+                  <i class="fa-solid fa-minus" style="color: #df1e63; display:none;"></i>
+                </span>
+                What Is a Professional Loan?
+              </button>
+            </h2>
+          </div>
+          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="card-body">
+              A professional loan is a loan or credit which is taken by professionals like doctors, accountants,
+              engineers, dentists, lawyers, company secretaries, architects, consultants, and other professionals. It is
+              much similar to personal loans, but a non-collateral loan. The loan is primarily taken for initiating a
+              startup or even for expanding the existing business. Many professionals use the fund to finance a foreign
+              trip, conference, or seminar related to the work.
+            </div>
+          </div>
+        </div>
+        <div class="card mb-3">
+          <div class="card-header" id="headingTwo">
+            <h2 class="mb-0">
+              <button class="accordion-btn btn p-0 border-0 bg-transparent shadow-none text-dark fw-semibold collapsed"
+                type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                aria-controls="collapseTwo" style="font-size:1rem;">
+                <span class="icon-toggle">
+                  <i class="fa-solid fa-plus" style="color: #df1e63;"></i>
+                  <i class="fa-solid fa-minus" style="color: #df1e63; display:none;"></i>
+                </span>
+                Who & When Can Professional Loan Be Taken?
+              </button>
+            </h2>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="card-body">
+              Professional loans are taken by professionals who have their consultancy or are looking to build one. The
+              professional should also be practicing their services for a minimum of 2 years successfully. The
+              professional should also be licensed as a self-employed professional with any central body or state. For
+              getting eligible for the loan, the professional should also be in the age group of 21 to 65 years,
+              however, the age criteria can also differ from one lender to the other.
+              <div class="card-body">
+                The loan helps the self-employed professionals in overcoming the liquidity requirements to avoid any
+                usage from their savings.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-3">
+          <div class="card-header" id="headingThree">
+            <h2 class="mb-0">
+              <button class="accordion-btn btn p-0 border-0 bg-transparent shadow-none text-dark fw-semibold collapsed"
+                type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                aria-controls="collapseThree" style="font-size:1rem;">
+                <span class="icon-toggle">
+                  <i class="fa-solid fa-plus" style="color: #df1e63;"></i>
+                  <i class="fa-solid fa-minus" style="color: #df1e63; display:none;"></i>
+                </span>
+                Characteristics of Professional Loan
+              </button>
+            </h2>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+            <div class="card-body">
+              The professional loans are required when the professionals are looking for funds to meet their expenses at
+              the time of emergencies. Here is a quick look at the characteristics of the professional loan.
+              <ul>
+                <li>Professionals can apply for a loan amount up to Rs. 75 lakhs</li>
+                <li>No prepayment charges along with another cost for the loan</li>
+                <li>No fore-closure charges for the professional loan</li>
+                <li>Professionals can choose ECS, PCD, and EMI for closing the loan</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h5 class="text-dark">Document Required</h5>
+      <div class="accordion mt-3 pb-3" id="accordionExampleRow" style="max-width:900px;">
+        <div>
+          <div class="card mb-3" style="min-width:320px; max-width:400px; flex:1 1 320px;">
+            <div class="card-header" id="headingFive">
+              <h2 class="mb-0">
+                <button
+                  class="accordion-btn btn p-0 border-0 bg-transparent shadow-none text-dark fw-semibold collapsed"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false"
+                  aria-controls="collapseFive" style="font-size:1rem;">
+                  <span class="icon-toggle">
+                    <i class="fa-solid fa-plus" style="color: #df1e63;"></i>
+                    <i class="fa-solid fa-minus" style="color: #df1e63; display:none;"></i>
+                  </span>
+                  Details
+                </button>
+              </h2>
+            </div>
+            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExampleRow">
+              <div class="card-body">
+                As the professional loan is obtained with minimal documents, you need to submit KYC documents along with
+                documents referring to your profession. The list includes.
+              </div>
+              <div class="card-body">
+                <ul>
+                  <li>Documents of your professional degree</li>
+                  <li>PAN card of your firm, company or individual</li>
+                  <li>Documents of your KYC like passport, Aadhar card, driving license, Voters ID Card, or PAN card
+                  </li>
+                  <li>Residential proof like passport, Aadhar card, driving license, or Voters ID card</li>
+                  <li>Bank Account statement of last 6 months</li>
+                  <li>Income tax computation, profit and loss account, and balance sheet, of the last 2 years along with
+                    the latest ITR attested by a chartered accountant</li>
+                  <li>Proof regarding the continuation of the business like the Trade license, ITR, Sales tax
+                    certificate, or establishment certificate</li>
+                </ul>
+              </div>
+              <div class="card-body">
+                Apart from all these, other documents might be required if asked by the lender.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container text-muted">
+    <h4 class="text-dark mt-3">FAQ's -</h4>
+    <b>How Will My Eligibility Be Calculated?</b>
+    <p class="text-muted">You are eligible for getting a professional loan if your age ranges from 23 to 65 years. You
+      should have a stable professional practice of a minimum of 2 years and your minimum income should be Rs. 5 lakhs
+      annually.</p>
+    <b>How Much Maximum Business Loan Can I Get?</b>
+    <p class="text-muted">The maximum loan amount an individual can apply for a professional loan is Rs. 75 lakhs.</p>
+    <b>How Much Credit Score Is Important While Getting a Professional Loan?</b>
+    <p class="text-muted">
+      In general, the credit score of the individual applying for a professional loan should range between 300 to 900
+      for giving the lenders a good idea of your creditability. However, the range depends on the lender.
+    </p>
+    <b>What Are the Interest Rates Available for Professional Loans?</b>
+    <p class="text-muted">The rate of interest charged on the individuals for professional loans ranges from 11% to 16%.
+      However, some banks also provide professional loans at 10.50% pa. Hence, it depends on the lender.</p>
+    <b>How Can I Apply for a Professional Loan?</b>
+    <p class="text-muted">Applying for a professional loan is much comfortable with FiscalMitra. You can easily visit
+      our official website, check your eligibility along with required documents and our experts would help you with the
+      entire process of application.</p>
+    <b>How Professional Loan Different from Another Loan?</b>
+    <p class="text-muted">The professional loans are charged with a reduced interest rate compared to other generic
+      business loans. The maximum tenure of repayment is around 60 months, but some banks provide a tenure of 72 months.
+    </p>
+  </div>
+  <!-- Details End -->
 
   <!-- footer -->
   <div style="background-color: #1d3a59;" class="footer container-fluid">
@@ -166,11 +555,12 @@
             <a href="ba.html">Become associate</a>
           </p>
         </div>
-        
+
         <div class="col-12 col-md-7 col-lg-4 mb-3">
           <h6 class="mt-3">Contact Us</h6>
           <p class="mb-0 footer-link">
-            <a style="word-break: break-all;" href="mailto:plymoutheepl25@gmail.com" class="d-flex align-items-center gap-2">
+            <a style="word-break: break-all;" href="mailto:plymoutheepl25@gmail.com"
+              class="d-flex align-items-center gap-2">
               <img src="Assets/mail-icon.png" alt="">
               plymoutheepl25@gmail.com
             </a>
@@ -188,29 +578,43 @@
             </a>
           </p>
         </div>
-        
+
         <div class="social col-12 col-md-5 col-lg-3">
           <h6 class="mt-3">Connect with us</h6>
-         <a href="https://www.instagram.com/fiscalmitra/">
-          <img src="Assets/instagram.png" alt="">
-         </a>
-         <a href="https://x.com/Fiscalmitra25">
-          <img src="Assets/twitter.png" alt="">
-         </a>
-         <a href="https://www.youtube.com/@Fiscalmitra">
-          <img src="Assets/video.png" alt="">
-         </a>
+          <a href="https://www.instagram.com/fiscalmitra/">
+            <img src="Assets/instagram.png" alt="">
+          </a>
+          <a href="https://x.com/Fiscalmitra25">
+            <img src="Assets/twitter.png" alt="">
+          </a>
+          <a href="https://www.youtube.com/@Fiscalmitra">
+            <img src="Assets/video.png" alt="">
+          </a>
         </div>
-        
+
       </div>
-      <div class="col-12 p-3 text-center style="background-color: #1d3a59; color: white;">
+      <div class="col-12 p-3 text-center style=" background-color: #1d3a59; color: white;">
         © 2023 Fiscalmitra. All rights reserved.
     </footer>
   </div>
   <!-- footer end -->
 
-
+  <script src="script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+const scriptURL = 'https://script.google.com/macros/s/AKfycbym5tju6E-Is4D6nvxKnL4_NkKcjBd6ZRzhEvMKzzIwINd3ZyHxb83pWbkhFbFbSyeu/exec';
+const form = document.getElementById('professionalLoanForm');
+
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+    .then(response => {
+      alert("Thanks for submitting your details!");
+      form.reset();
+    })
+    .catch(error => alert("Something went wrong. Please try again later."));
+});
+</script>
 </body>
 
 </html>

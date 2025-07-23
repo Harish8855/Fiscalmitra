@@ -5,9 +5,109 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles.css">
   <title>Fiscalmitra | Home</title>
+  <style>
+    .HL-bg {
+      background-image: url("Assets/HL.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      min-height: 300px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    form .form-label {
+      color: #ffffff;
+      font-size: 15px;
+    }
+
+    form .form-control,
+    form .form-select {
+      border-radius: 8px;
+      font-size: 15px;
+      padding: 0.7rem 1rem;
+    }
+
+    form .btn {
+      border-radius: 0;
+      letter-spacing: 2px;
+    }
+
+    .benefit-card {
+      border: 1px solid #e3eafc;
+      box-shadow: 0 8px 24px 0 rgba(29, 58, 89, 0.07);
+      border-radius: 0;
+      transition: box-shadow 0.2s;
+      background: #fff;
+      min-height: 180px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .benefit-card {
+      box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.15);
+    }
+
+    .benefit-card:hover {
+      box-shadow: 0 8px 32px 0 rgba(255, 193, 7, 0.7), 0 4px 16px 0 rgba(0, 0, 0, 0.15);
+    }
+
+    .benefit-card .card-title {
+      color: #1d3a59;
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+    }
+
+    .benefit-card .card-text {
+      color: #7b7b93;
+      font-size: 1rem;
+      font-weight: 400;
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 991.98px) {
+      .benefit-card {
+        min-height: 200px;
+      }
+    }
+
+    @media (max-width: 767.98px) {
+      .benefit-card {
+        min-height: 0;
+      }
+    }
+
+    .benefits-title {
+      color: #1d3a59;
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.5px;
+    }
+
+    .benefits-desc {
+      color: #7b7b93;
+      font-size: 1.15rem;
+      font-weight: 400;
+      margin-bottom: 2.5rem;
+    }
+
+    .accordion {
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
 </head>
 
 <body>
@@ -66,7 +166,556 @@
   </nav>
   <!-- Navbar End -->
 
- 
+  <!-- Form -->
+  <div class="container-fluid HL-bg">
+    <div class="container">
+      <div class="my-5">
+        <h1 class="fw-bold">Business Loans starting @16%*</h1>
+        <h3 class="fw-bold">Request Quote Now</h3>
+        <p>Easy to apply for a loan with us, Once you have complete this form.</p>
+        <form id="businessLoanForm">
+          <div class="row g-3">
+            <div class="col-md-4">
+              <label class="form-label fw-semibold">Enter loan amount</label>
+              <input type="text" class="form-control" name="loan_amount" placeholder="₹ Enter loan amount" required>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label fw-semibold">Enter Annual Sales & Turnover</label>
+              <input type="text" class="form-control" name="annual_sales" placeholder="₹ Company Annual Sales & Turnover" required>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label fw-semibold">Company Annual Net Profit</label>
+              <input type="text" class="form-control" name="net_profit" placeholder="₹ Company Annual Net Profit" required>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label fw-semibold">Enter your resident postal code</label>
+              <input type="text" class="form-control" name="postal_code" placeholder="Enter your resident postal code" required>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label fw-semibold">Enter your Company Name</label>
+              <input type="text" class="form-control" name="company_name" placeholder="Enter Your Company Name" required>
+            </div>
+            <div class="col-md-4 mt-3">
+              <label class="form-label fw-semibold">Select Company Type</label>
+              <select name="company_type" class="form-control input-md" required>
+                <option value="Sole Proprietorship">Sole Proprietorship</option>
+                <option value="One-Person Company">One-Person Company</option>
+                <option value="Partnership Firm">Partnership Firm</option>
+                <option value="Limited Liability Partnership">Limited Liability Partnership</option>
+                <option value="Limited Liability Company">Limited Liability Company</option>
+                <option value="Private Limited Company">Private Limited Company</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label fw-semibold">Current account bank name</label>
+              <select name="bank_name" class="form-control input-md" required>
+                <option value="" style="display:none;">Select Bank</option>
+                <option value="Australia and New Zealand Banking">Australia and New Zealand Banking</option>
+                <option value="AB Bank Ltd.">AB Bank Ltd.</option>
+                <option value="Abhyudaya Co-op Bank Ltd">Abhyudaya Co-op Bank Ltd</option>
+                <option value="Abu Dhabi Commercial Bank Ltd">Abu Dhabi Commercial Bank Ltd</option>
+                <option value="Ahmedabad Mercantile Co-op Bank">Ahmedabad Mercantile Co-op Bank</option>
+                <option value="Allahabad Bank">Allahabad Bank</option>
+                <option value="Andhra Bank">Andhra Bank</option>
+                <option value="Antwerp Diamond Bank Mumbai">Antwerp Diamond Bank Mumbai</option>
+                <option value="Axis Bank">Axis Bank</option>
+                <option value="Bank Internasional Indonesia">Bank Internasional Indonesia</option>
+                <option value="Bank Of America">Bank Of America</option>
+                <option value="Bank Of Bahrain And Kuwait">Bank Of Bahrain And Kuwait</option>
+                <option value="Bank of Baroda">Bank of Baroda</option>
+                <option value="Bank Of Ceylon">Bank Of Ceylon</option>
+                <option value="Bank of India">Bank of India</option>
+                <option value="Bank Of Maharashtra">Bank Of Maharashtra</option>
+                <option value="Bank Of Nova Scotia">Bank Of Nova Scotia</option>
+                <option value="Bank Of Tokyo-Mitsubishi Ufj Ltd">Bank Of Tokyo-Mitsubishi Ufj Ltd</option>
+                <option value="Barclays Bank Plc">Barclays Bank Plc</option>
+                <option value="Bassein Catholic Co-op Bank Ltd">Bassein Catholic Co-op Bank Ltd</option>
+                <option value="Bharat Co-op Bank (Mumbai) Ltd">Bharat Co-op Bank (Mumbai) Ltd</option>
+                <option value="BNP Paribas">BNP Paribas</option>
+                <option value="Bombay Mercantile Co-operative bank Limited">Bombay Mercantile Co-operative bank Limited
+                </option>
+                <option value="Canara Bank">Canara Bank</option>
+                <option value="Catholic Syrian Bank Ltd">Catholic Syrian Bank Ltd</option>
+                <option value="Central Bank of India">Central Bank of India</option>
+                <option value="Chinatrust Commercial Bank">Chinatrust Commercial Bank</option>
+                <option value="Citibank India">Citibank India</option>
+                <option value="Citizencredit Co-op Bank Ltd">Citizencredit Co-op Bank Ltd</option>
+                <option value="City Union Bank Ltd">City Union Bank Ltd</option>
+                <option value="Commonwealth Bank of Australia">Commonwealth Bank of Australia</option>
+                <option value="Corporation Bank">Corporation Bank</option>
+                <option value="Cosmos Co-op Bank Ltd">Cosmos Co-op Bank Ltd</option>
+                <option value="Credit Agricole Corp and Investment Bank">Credit Agricole Corp and Investment Bank
+                </option>
+                <option value="DBS Bank">DBS Bank</option>
+                <option value="Dena Bank">Dena Bank</option>
+                <option value="Deutsche Bank Ag">Deutsche Bank Ag</option>
+                <option value="Development Credit Bank">Development Credit Bank</option>
+                <option value="Dhanlaxmi Bank Ltd">Dhanlaxmi Bank Ltd</option>
+                <option value="Dicgc">Dicgc</option>
+                <option value="Doha Bank">Doha Bank</option>
+                <option value="Dombivli Nagari Sahakari Bank Ltd">Dombivli Nagari Sahakari Bank Ltd</option>
+                <option value="Emirates NBD Bank  PJSC">Emirates NBD Bank PJSC</option>
+                <option value="Export-Import Bank of India">Export-Import Bank of India</option>
+                <option value="Federal Bank Ltd">Federal Bank Ltd</option>
+                <option value="Firstrand Bank Ltd">Firstrand Bank Ltd</option>
+                <option value="Greater Bombay Co-op Bank Ltd">Greater Bombay Co-op Bank Ltd</option>
+                <option value="Group Limited&quot;">Group Limited"</option>
+                <option value="HDFC Bank">HDFC Bank</option>
+                <option value="HSBC">HSBC</option>
+                <option value="HSBC Bank Oman S.A.O.G.">HSBC Bank Oman S.A.O.G.</option>
+                <option value="ICICI Bank">ICICI Bank</option>
+                <option value="IDBI Bank">IDBI Bank</option>
+                <option value="IDFC FIRST BANK LIMITED">IDFC FIRST BANK LIMITED</option>
+                <option value="IFCI Factors Limited">IFCI Factors Limited</option>
+                <option value="Indian Bank">Indian Bank</option>
+                <option value="Indian Overseas Bank">Indian Overseas Bank</option>
+                <option value="IndusInd Bank Ltd.">IndusInd Bank Ltd.</option>
+                <option value="Industrial and Commercial Bank of China Ltd.">Industrial and Commercial Bank of China
+                  Ltd.</option>
+                <option value="Industrial Bank of  Korea">Industrial Bank of Korea</option>
+                <option value="ING Vysya Bank">ING Vysya Bank</option>
+                <option value="Jammu &amp; Kashmir Bank Ltd.">Jammu &amp; Kashmir Bank Ltd.</option>
+                <option value="Janakalyan Sahakari Bank Ltd">Janakalyan Sahakari Bank Ltd</option>
+                <option value="Janata Sahkari Bank Ltd Pune">Janata Sahkari Bank Ltd Pune</option>
+                <option value="Jpmorgan Chase Bank">Jpmorgan Chase Bank</option>
+                <option value="Kalupur Commercial Co-op Bank Ltd">Kalupur Commercial Co-op Bank Ltd</option>
+                <option value="Kalyan Janata Sahakari Bank Ltd">Kalyan Janata Sahakari Bank Ltd</option>
+                <option value="Kapole Co-op Bank">Kapole Co-op Bank</option>
+                <option value="Karnataka Bank Ltd.">Karnataka Bank Ltd.</option>
+                <option value="Karnataka State Co-op Apex Bank">Karnataka State Co-op Apex Bank</option>
+                <option value="Karur Vysya Bank">Karur Vysya Bank</option>
+                <option value="KEB  Hana Bank">KEB Hana Bank</option>
+                <option value="Kotak Mahindra Bank">Kotak Mahindra Bank</option>
+                <option value="Krung Thai Bank PCL Mumbai">Krung Thai Bank PCL Mumbai</option>
+                <option value="Lakshmi Vilas Bank Ltd">Lakshmi Vilas Bank Ltd</option>
+                <option value="Mahanagar Co-op Bank Ltd">Mahanagar Co-op Bank Ltd</option>
+                <option value="Maharashtra State Co-operative Bank Limited">Maharashtra State Co-operative Bank Limited
+                </option>
+                <option value="Mashreq Bank Psc">Mashreq Bank Psc</option>
+                <option value="Mehsana Urban Co-op Bank Ltd">Mehsana Urban Co-op Bank Ltd</option>
+                <option value="Mizuho Corporate Bank Ltd">Mizuho Corporate Bank Ltd</option>
+                <option value="Nainital Bank Ltd">Nainital Bank Ltd</option>
+                <option value="National Australia Bank">National Australia Bank</option>
+                <option value="National Bank of Abu Dhabi PJSC">National Bank of Abu Dhabi PJSC</option>
+                <option value="New India Co-op Bank Ltd">New India Co-op Bank Ltd</option>
+                <option value="Nkgsb Co-op Bank Ltd">Nkgsb Co-op Bank Ltd</option>
+                <option value="Nutan Nagarik Sahakari Bank Ltd">Nutan Nagarik Sahakari Bank Ltd</option>
+                <option value="Oman International Bank Saog">Oman International Bank Saog</option>
+                <option value="Oriental Bank of Commerce">Oriental Bank of Commerce</option>
+                <option value="Parsik Janata Sahakari Bank Ltd">Parsik Janata Sahakari Bank Ltd</option>
+                <option value="Punjab &amp; Sind Bank">Punjab &amp; Sind Bank</option>
+                <option value="Punjab and Maharashtra Bank Ltd.">Punjab and Maharashtra Bank Ltd.</option>
+                <option value="Punjab National Bank">Punjab National Bank</option>
+                <option value="Qatar National Bank(QPSC)">Qatar National Bank(QPSC)</option>
+                <option value="Rabobank International">Rabobank International</option>
+                <option value="Rajkot Nagarik Sahakari Bank Ltd">Rajkot Nagarik Sahakari Bank Ltd</option>
+                <option value="Ratnakar Bank Ltd">Ratnakar Bank Ltd</option>
+                <option value="Reserve Bank Of India">Reserve Bank Of India</option>
+                <option value="Royal bank of scotland">Royal bank of scotland</option>
+                <option value="Saraswat Co-operative Bank Ltd.">Saraswat Co-operative Bank Ltd.</option>
+                <option value="Sberbank">Sberbank</option>
+                <option value="SBI Global Factors Ltd">SBI Global Factors Ltd</option>
+                <option value="Shamrao Vithal Co-op Bank Ltd">Shamrao Vithal Co-op Bank Ltd</option>
+                <option value="Shinhan Bank">Shinhan Bank</option>
+                <option value="Societe Generale">Societe Generale</option>
+                <option value="Sonali Bank Ltd.">Sonali Bank Ltd.</option>
+                <option value="South Indian Bank">South Indian Bank</option>
+                <option value="Standard Chartered Bank">Standard Chartered Bank</option>
+                <option value="State Bank Of Bikaner And Jaipur">State Bank Of Bikaner And Jaipur</option>
+                <option value="State Bank of Hyderabad">State Bank of Hyderabad</option>
+                <option value="State Bank of India">State Bank of India</option>
+                <option value="State Bank Of Mauritius Ltd">State Bank Of Mauritius Ltd</option>
+                <option value="State Bank of Mysore">State Bank of Mysore</option>
+                <option value="State Bank Of Patiala">State Bank Of Patiala</option>
+                <option value="State Bank of Saurashtra">State Bank of Saurashtra</option>
+                <option value="State Bank Of Travancore">State Bank Of Travancore</option>
+                <option value="Sumitomo Mitsui Banking Corporation">Sumitomo Mitsui Banking Corporation</option>
+                <option value="Surat Peoples Co-op Bank Ltd">Surat Peoples Co-op Bank Ltd</option>
+                <option value="Syndicate Bank">Syndicate Bank</option>
+                <option value="Tamilnad Mercantile Bank Ltd">Tamilnad Mercantile Bank Ltd</option>
+                <option value="Thane Janta Sahakari Bank, Ltd.">Thane Janta Sahakari Bank, Ltd.</option>
+                <option value="The Karad Urban Co-op Bank Ltd">The Karad Urban Co-op Bank Ltd</option>
+                <option value="The Nasik Merchants Co-op Bank Ltd">The Nasik Merchants Co-op Bank Ltd</option>
+                <option value="UBS AG">UBS AG</option>
+                <option value="UCO Bank">UCO Bank</option>
+                <option value="Union Bank of India">Union Bank of India</option>
+                <option value="United Bank of India">United Bank of India</option>
+                <option value="United Overseas Bank">United Overseas Bank</option>
+                <option value="Vijaya Bank">Vijaya Bank</option>
+                <option value="West Bengal State Co-op Bank Ltd">West Bengal State Co-op Bank Ltd</option>
+                <option value="Westpac Banking Corporation">Westpac Banking Corporation</option>
+                <option value="Woori Bank">Woori Bank</option>
+                <option value="Yes Bank">Yes Bank</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label fw-semibold">Enter full name, Ex: Firstname Lastname</label>
+              <input type="text" class="form-control" name="full_name" placeholder="Enter full name, Ex: Firstname Lastname" required>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label fw-semibold">Enter your email id (Ex: some@something.com)</label>
+              <input type="email" class="form-control" name="email" placeholder="Enter your email id (Ex: some@something.com)" required>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label fw-semibold">Enter 10-digit mobile number.</label>
+              <input type="text" class="form-control" name="mobile" placeholder="Enter 10-digit mobile number." required>
+            </div>
+          </div>
+          <div style="font-size: 0.8rem;" class="mt-4 mb-2">
+            I have read and agreed to <a href="tos.html" style="color:#e91e63; font-weight:500;">Terms & Conditions</a>
+            and
+            authorized FiscalMitra to contact me. This will override registry on DND / NDNC. I also hereby appoint
+            FiscalMitra as my authorised representative to receive my credit information from Cibil/ Equifax/ Experian/
+            Highmark (bureau). <b>By clicking submit you are agreeing to the Terms and Conditions.</b>
+          </div>
+          <button type="submit" class="btn w-100 py-2"
+            style="background:#e91e63; color:#fff; font-weight:600; font-size:18px;">SUBMIT</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- Form End -->
+
+  <!-- Card-->
+  <div class="container text-center mt-5 mb-4">
+    <h2 class="benefits-title">Benefits at FiscalMitra ?</h2>
+    <p class="benefits-desc">Tons of benefits with us compare to our competitors.</p>
+    <div class="row justify-content-center g-4">
+      <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 d-flex">
+        <div class="card benefit-card w-100">
+          <div class="card-body">
+            <div class="card-title">COMPARE &amp; AVAIL</div>
+            <div class="card-text">Minimum Rates from different financial institutions.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 d-flex">
+        <div class="card benefit-card w-100">
+          <div class="card-body">
+            <div class="card-title">BANKING CONVENIENCE</div>
+            <div class="card-text">On your Fingertips loans and cards available at door step.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 d-flex">
+        <div class="card benefit-card w-100">
+          <div class="card-body">
+            <div class="card-title">EARN</div>
+            <div class="card-text">Earn Your EMI using our referral based model Click here for more information.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 d-flex">
+        <div class="card benefit-card w-100">
+          <div class="card-body">
+            <div class="card-title">BECOME</div>
+            <div class="card-text">Partner &amp; earn with zero investment Click here for more information.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Card end -->
+
+  <!-- Details -->
+  <div class="container-fluid casual-bg text-muted">
+    <div class="container">
+      <!-- <div class="row"> -->
+      <div class="col-lg-12 p-3">
+        <div class="mb-5 mb-lg-0">
+          <h2 class="text-dark mt-3">Business Loan</h2>
+          <p class="text-muted">
+            At Finance Mitra, we understand that business owners might have to face cash crunch and challenges during
+            the regular operations or under special circumstances. Therefore, we offer a unique business loan portfolio
+            to provide easy loan assistance with flexible funding and repay facilities.
+            Get the customized business loan options from Finance Mitra – your ideal financial partner. Choose from our
+            affordable plans for empowering any business loan requirements like starting a new business, expanding the
+            current business, revamping an existing venture, modernizing equipments & machinery, boosting working
+            capital, and funding plans to outperform competition.
+            Keep afloat your personal business dreams while we take the trouble of entire processing and documentation.
+            With us, enjoy easy and hassle-free business loan services within quick clicks.
+          </p><br>
+          <p>
+            <b class="text-muted">Eligibility</b><br>
+          </p>
+          <ul>
+            <li>Indian resident</li>
+            <li>Age from 18 to 65 years</li>
+            <li> Ideal for Individuals, SMEs, MSMEs, Sole Proprietorship, Partnership firms, public and private limited
+              companies, limited liability partnerships, retailers, traders, manufacturers engaged in only services,
+              trading and manufacturing sectors</li>
+            <li> Business Vintage for minimum 2 years in profit</li>
+            <li> Business should in operations for minimum 2 years in the same location</li>
+            <li>Annual Turnover shouldn’t be less than Rs. 25 lakhs</li>
+            <li> CIBIL Score shouldn’t be less than 730</li>
+            <li>Applicant must own either a residence, office, shop or go down</li>
+          </ul>
+          <br>
+          <b>Documents Required:</b><br>
+          <b>SELF-EMPLOYED</b><br>
+          <ul>
+            <li>6 months bank statement</li>
+            <li>Income tax returns for the last 3 years</li>
+            <li>Business proof</li>
+            <li>Ownership proofs regarding the possessions used in the business</li>
+            <li>Identity proof like Aadhar card, PAN Card, Voter ID Card, etc.</li>
+            <li>Know Your Customer (KYC) documents of the co-applicant</li>
+            <li> Residential proof</li>
+          </ul><br>
+          <b>
+            Benefits of Business loan from FiscalMitra
+          </b><br>
+          <ul>
+            <li>No security or collateral</li>
+            <li>Affordable repayment facilities</li>
+            <li>Warranty isn’t required</li>
+            <li>Minimal interest rates</li>
+            <li>Minimal paperwork and documentation</li>
+            <li>Structured loaning process</li>
+            <li>Easy disbursal in your account</li>
+          </ul>
+          <p></p>
+        </div>
+      </div>
+      <div class="accordion" id="accordionExampleMain">
+        <div class="card mb-3">
+          <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+              <button class="accordion-btn btn p-0 border-0 bg-transparent shadow-none text-dark fw-semibold collapsed"
+                type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                aria-controls="collapseOne" style="font-size:1rem;">
+                <span class="icon-toggle">
+                  <i class="fa-solid fa-plus" style="color: #df1e63;"></i>
+                  <i class="fa-solid fa-minus" style="color: #df1e63; display:none;"></i>
+                </span>
+                What Is a Business Loan?
+              </button>
+            </h2>
+          </div>
+          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="card-body">
+              A business loan is one of the financing services any business owner can look for improving, expanding, or
+              developing the business. A business loan is often required for expanding the existing business to the next
+              level, for purchasing any machinery or asset, increasing the production of the company, and much more. It
+              helps in meeting the heavy expenses of the company while looking for some growth and development. There
+              are various types of Business Loans available which include SBA loans, credit business lines, term loans,
+              and many more.
+            </div>
+          </div>
+        </div>
+        <div class="card mb-3">
+          <div class="card-header" id="headingTwo">
+            <h2 class="mb-0">
+              <button class="accordion-btn btn p-0 border-0 bg-transparent shadow-none text-dark fw-semibold collapsed"
+                type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                aria-controls="collapseTwo" style="font-size:1rem;">
+                <span class="icon-toggle">
+                  <i class="fa-solid fa-plus" style="color: #df1e63;"></i>
+                  <i class="fa-solid fa-minus" style="color: #df1e63; display:none;"></i>
+                </span>
+                Who and When Can Business Loan Be Taken?
+              </button>
+            </h2>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="card-body">
+              A Business Loan eligibility criterion includes self-employed individuals, Private limited companies,
+              proprietors, Partnership Firms, etc. who are dealing in trading and services, manufacturing, etc. The
+              business should have a yearly turnover of minimum Rs. 40 lakhs, individuals running the business for a
+              minimum of 3 to 5 years, companies making profits for a minimum of 2 years, any business having a Minimal
+              Annual Income of around Rs. 1.5 lakhs, and lastly, the minimum age of the business owner should be 21.
+              Also, the applicant should not be older than 65 when the loan matures.
+              <div class="card-body">
+                A Business Loan can be taken when the owner is looking for expansion of the business or physical
+                location, building credit, purchase of equipment or essential assets, purchase of additional inventory,
+                for grabbing any development opportunity that requires potential debt, or for hiring fresh talent or
+                meeting short term working capital requirements.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-3">
+          <div class="card-header" id="headingThree">
+            <h2 class="mb-0">
+              <button class="accordion-btn btn p-0 border-0 bg-transparent shadow-none text-dark fw-semibold collapsed"
+                type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                aria-controls="collapseThree" style="font-size:1rem;">
+                <span class="icon-toggle">
+                  <i class="fa-solid fa-plus" style="color: #df1e63;"></i>
+                  <i class="fa-solid fa-minus" style="color: #df1e63; display:none;"></i>
+                </span>
+                Benefits of Business Loan
+              </button>
+            </h2>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+            <div class="card-body">
+              Be it a small company or a huge organization, Finance Mitra recommends Business loans for companies
+              looking for some quick financial aid. Here is how the Business loan is beneficial.
+            </div>
+            <ul>
+              <li>Use the funding amount for any business-oriented demand as per your requirement</li>
+              <li>Low-interest rates compared to the premium loans available in the market</li>
+              <li>Easy repayment facilities</li>
+              <li>Warranty not required</li>
+              <li>Helps in facing the business competitors</li>
+              <li>No collateral required</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card mb-3">
+          <div class="card-header" id="headingFour">
+            <h2 class="mb-0">
+              <button class="accordion-btn btn p-0 border-0 bg-transparent shadow-none text-dark fw-semibold collapsed"
+                type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
+                aria-controls="collapseFour" style="font-size:1rem;">
+                <span class="icon-toggle">
+                  <i class="fa-solid fa-plus" style="color: #df1e63;"></i>
+                  <i class="fa-solid fa-minus" style="color: #df1e63; display:none;"></i>
+                </span>
+                Characteristics of Business Loan
+              </button>
+            </h2>
+          </div>
+          <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+            <div class="card-body">
+              A business loan is an ideal option when your business needs short term working capital to meet various
+              emergencies or opportunities. The loans are provided at affordable rates. Here are the characteristics of
+              a business loan.
+            </div>
+            <ul>
+              <li>Flexible loan facility</li>
+              <li>High loan amount</li>
+              <li>Security free loans</li>
+              <li>Pre-approved loan offers</li>
+              <li>Online loan account</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="accordion mt-3" id="accordionExampleRow"
+        style="max-width:900px; margin-left:auto; margin-right:auto;">
+        <div style="gap: 5rem;" class="d-flex justify-content-center flex-wrap">
+          <div class="card mb-3" style="min-width:320px; max-width:400px; flex:1 1 320px;">
+            <div class="card-header" id="headingFive">
+              <h2 class="mb-0">
+                <button
+                  class="accordion-btn btn p-0 border-0 bg-transparent shadow-none text-dark fw-semibold collapsed"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false"
+                  aria-controls="collapseFive" style="font-size:1rem;">
+                  <span class="icon-toggle">
+                    <i class="fa-solid fa-plus" style="color: #df1e63;"></i>
+                    <i class="fa-solid fa-minus" style="color: #df1e63; display:none;"></i>
+                  </span>
+                  Why Us
+                </button>
+              </h2>
+            </div>
+            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExampleRow">
+              <div class="card-body">
+                <b class="text-dark">Whether you are looking for expanding your business space, purchasing new assets,
+                  investing in inventory, or even hiring new talents, our team of experts at Finance Mitra are ready to
+                  aid in your boost by saving your time and money.</b>
+              </div>
+              <div class="card-body">
+                Whether you are looking for expanding your business space, purchasing new assets, investing in
+                inventory, or even hiring new talents, our team of experts at Finance Mitra are ready to aid in your
+                boost by saving your time and money.
+              </div>
+              <div class="card-body">
+                With quick processing, flexible repayment selections, and low-interest rates in the market, Finance
+                Mitra is all set to provide you with easy funding options to boost your business for increased profits.
+                All the documentation processes would be worked out by our team which makes the process quick and
+                comfortable for you.
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3" style="min-width:320px; max-width:400px; flex:1 1 320px;">
+            <div class="card-header" id="headingSix">
+              <h2 class="mb-0">
+                <button
+                  class="accordion-btn btn p-0 border-0 bg-transparent shadow-none text-dark fw-semibold collapsed"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false"
+                  aria-controls="collapseSix" style="font-size:1rem;">
+                  <span class="icon-toggle">
+                    <i class="fa-solid fa-plus" style="color: #df1e63;"></i>
+                    <i class="fa-solid fa-minus" style="color: #df1e63; display:none;"></i>
+                  </span>
+                  Documents Required
+                </button>
+              </h2>
+            </div>
+            <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExampleRow">
+              <div class="card-body">
+                Here is the list of documents that are required to be submitted by the business owner to avail of a
+                business loan.
+              </div>
+              <ul>
+                <li>Statement of the bank account for the last 6 months</li>
+                <li>Business proof</li>
+                <li>Ownership proofs regarding the possessions used in the business</li>
+                <li>Identity proof like Aadhar card, PAN Card, Voter ID Card, etc.6</li>
+                <li>Know Your Customer (KYC) documents of the co-applicant</li>
+                <li>Residential proof</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container text-muted">
+    <h3 class="text-dark p-3">FAQ's -</h3>
+    <b>Q1.What is Business loan?</b>
+    <p class="text-muted">Business loan is the primary unsecured type of funding, designed to meet the day-to-day business requirements of business owners or enterprises. Borrowers are not pressurized to submit any collateral or security to avail unsecured business loan.</p>
+    <p class="text-muted">Business loans can be used for business expansion purposes, manage cash flow, buy equipment/machinery, hire/train staff, purchase raw materials, upgrade inventory and much more.</p>
+    <p class="text-muted">
+     There is no minimum loan limit criteria to borrow, whereas customers can avail collateral-free business loans up to Rs. 1 crore with flexible and customized repayment options.
+    </p>
+    <b>Q2.Business Loan Eligibility Criteria ?</b>
+    <p class="text-muted">Following are the Business loan eligibility criteria that most banks and NBFCs require their applicants to meet before loan sanctioning. Business loan eligibility criteria shall differ from lender to lender. These details can also be checked with the help of business loan eligibility calculator.</p>
+    
+    <b>Q3. What are the mandatory documents required in applying for a Personal Loan?</b>
+    <p class="text-muted">-The mandatory documents are:</p>
+    <ul>
+      <li>Bank Statements for the last three months</li>
+      <li>Salary Slips for the last three months</li>
+      <li>Address Proof and Identity Proof documents</li>
+    </ul>
+    <b>Q4.Do I need to provide any security or collateral or guarantors?</b>
+    <p class="text-muted">No, for Personal Loan you don’t need to provide any security, collateral or guarantors.</p>
+    <b>Q5. How is the maximum loan amount decided?</b>
+    <p class="text-muted">When calculating the maximum personal loan amount in case of salaried people, the
+      bank/financial institution takes care that the EMI does not exceed 30% to40% of the applicant’s take home salary.
+      Any existing loans that are being serviced by the applicant are also considered when calculating the personal loan
+      amount. And, for the self employed, the loan value is determined on the basis of the profit earned as per the most
+      recent acknowledged Profit/Loss statement, while taking into account any additional liabilities (such as current
+      loans for business etc.) that the applicant might have.</p>
+    <b>Q6. What is the tenure of a personal loan?</b>
+    <p class="text-muted">Personal loans feature tenure of 1 year to 5 years or 12 to 60 months. In rare cases, shorter
+      or longer personal loan tenures may be allowed by the borrower on a case by case basis.</p>
+    <b>Q7. What What is the minimum and maximum loan amount?</b>
+    <p class="text-muted">We provide Personal Loans from a minimum of ₹ 75,000 to a maximum of ₹ 25,00,000/- depending
+      on your eligibility.</p>
+    <b>Q8.Can I get a Personal Loan with a low CIBIL score?</b>
+    <p class="text-muted">It is important to have a good CIBIL score. But this should not stop you from applying for a
+      Personal Loan. Approval of Personal Loans depends on your ability to repay.</p>
+    <b>Q9.Will I get a loan with a low CIBIL score?</b>
+    <p class="text-muted">If you need a Personal Loan and have a low CIBIL score, you have the option to take a joint
+      loan with your spouse or parent. However, approval of Personal Loans depends on your ability to repay.</p>
+    <b>Q10.How does credit report impact Personal Loan approval process?</b>
+    <p class="text-muted">Credit report provides details on your financial status and your ability to repay a Personal
+      Loan. This helps us evaluate your financial history. A good credit report with a score of 750 will help you take a
+      loan easily.</p>
+    <b>Q11.Do you have a Personal Loan transfer facility?</b>
+    <p class="text-muted">Yes, you can get your Personal Loan transferred from one Bank/NBFC to another Bank with lower
+      ROI.</p>
+    <b>Q12.How much time does it take for the Personal loan to be disbursed?</b>
+    <p class="text-muted">Once we have all your documents with us and the verification process is completed, it
+      generally takes about 72 hours for the Personal Loan amount to be credited to your bank account.</p>
+  </div>
+  <!-- Details End -->
 
   <!-- footer -->
   <div style="background-color: #1d3a59;" class="footer container-fluid">
@@ -92,11 +741,12 @@
             <a href="ba.html">Become associate</a>
           </p>
         </div>
-        
+
         <div class="col-12 col-md-7 col-lg-4 mb-3">
           <h6 class="mt-3">Contact Us</h6>
           <p class="mb-0 footer-link">
-            <a style="word-break: break-all;" href="mailto:plymoutheepl25@gmail.com" class="d-flex align-items-center gap-2">
+            <a style="word-break: break-all;" href="mailto:plymoutheepl25@gmail.com"
+              class="d-flex align-items-center gap-2">
               <img src="Assets/mail-icon.png" alt="">
               plymoutheepl25@gmail.com
             </a>
@@ -114,22 +764,22 @@
             </a>
           </p>
         </div>
-        
+
         <div class="social col-12 col-md-5 col-lg-3">
           <h6 class="mt-3">Connect with us</h6>
-         <a href="https://www.instagram.com/fiscalmitra/">
-          <img src="Assets/instagram.png" alt="">
-         </a>
-         <a href="https://x.com/Fiscalmitra25">
-          <img src="Assets/twitter.png" alt="">
-         </a>
-         <a href="https://www.youtube.com/@Fiscalmitra">
-          <img src="Assets/video.png" alt="">
-         </a>
+          <a href="https://www.instagram.com/fiscalmitra/">
+            <img src="Assets/instagram.png" alt="">
+          </a>
+          <a href="https://x.com/Fiscalmitra25">
+            <img src="Assets/twitter.png" alt="">
+          </a>
+          <a href="https://www.youtube.com/@Fiscalmitra">
+            <img src="Assets/video.png" alt="">
+          </a>
         </div>
-        
+
       </div>
-      <div class="col-12 p-3 text-center style="background-color: #1d3a59; color: white;">
+      <div class="col-12 p-3 text-center style=" background-color: #1d3a59; color: white;">
         © 2023 Fiscalmitra. All rights reserved.
     </footer>
   </div>
@@ -137,6 +787,21 @@
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxAhdUfVSwBrxapVpCv35Ixe0qSvaGEQo5jHagz4x-6JypgcHkGHZgZ5kvoFLWWe9a5/exec'; // Replace with your Apps Script Web App URL
+const form = document.getElementById('businessLoanForm');
+
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+    .then(response => {
+      alert("Thanks for submitting your details!");
+      form.reset();
+    })
+    .catch(error => alert("Something went wrong. Please try again later."));
+});
+</script>
 </body>
 
-</html>
+</html>[]
