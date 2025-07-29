@@ -66,9 +66,301 @@
   </nav>
   <!-- Navbar End -->
 
- 
+  <!-- Form -->
+  <div class="container-fluid HL-bg">
+    <div class="container">
+      <div class="my-5">
+        <h1 class="fw-bold">Loan against Property starting @8.35%*</h1>
+        <h3 class="fw-bold">Request Quote Now</h3>
+        <p>Easy to apply for a loan with us, Once you have complete this form.</p>
+        <form id="lapForm">
+          <div class="row g-3">
+            <div class="col-md-4">
+              <label class="form-label fw-semibold">Service Type</label>
+              <select class="form-select" name="service_type" required>
+                <option>Business</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label fw-semibold">Enter loan amount</label>
+              <input type="text" class="form-control" name="loan_amount" placeholder="₹ Enter loan amount" required>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label fw-semibold">Enter your resident postal code</label>
+              <input type="text" class="form-control" name="postal_code" placeholder="Enter your resident postal code"
+                required>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label fw-semibold">Enter your company name</label>
+              <input type="text" class="form-control" name="company_name" placeholder="Enter your company name">
+            </div>
+            <div class="col-md-4">
+              <label class="form-label fw-semibold">Select Type of Company</label>
+              <select class="form-select" name="company_type">
+                <option value="" style="display:none;">Select</option>
+                <option value="Sole Proprietorship">Sole Proprietorship</option>
+                <option value="One-Person Company">One-Person Company</option>
+                <option value="Partnership Firm">Partnership Firm</option>
+                <option value="Limited Liability Partnership">Limited Liability Partnership</option>
+                <option value="Private Limited Company">Private Limited Company</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label fw-semibold">Current account bank name</label>
+              <select name="bank_name" class="form-control input-md" required>
+                <option value="" style="display:none;">Select Bank</option>
+                <option value="Australia and New Zealand Banking">Australia and New Zealand Banking</option>
+                <option value="AB Bank Ltd.">AB Bank Ltd.</option>
+                <option value="Abhyudaya Co-op Bank Ltd">Abhyudaya Co-op Bank Ltd</option>
+                <option value="Abu Dhabi Commercial Bank Ltd">Abu Dhabi Commercial Bank Ltd</option>
+                <option value="Ahmedabad Mercantile Co-op Bank">Ahmedabad Mercantile Co-op Bank</option>
+                <option value="Allahabad Bank">Allahabad Bank</option>
+                <option value="Andhra Bank">Andhra Bank</option>
+                <option value="Antwerp Diamond Bank Mumbai">Antwerp Diamond Bank Mumbai</option>
+                <option value="Axis Bank">Axis Bank</option>
+                <option value="Bank Internasional Indonesia">Bank Internasional Indonesia</option>
+                <option value="Bank Of America">Bank Of America</option>
+                <option value="Bank Of Bahrain And Kuwait">Bank Of Bahrain And Kuwait</option>
+                <option value="Bank of Baroda">Bank of Baroda</option>
+                <option value="Bank Of Ceylon">Bank Of Ceylon</option>
+                <option value="Bank of India">Bank of India</option>
+                <option value="Bank Of Maharashtra">Bank Of Maharashtra</option>
+                <option value="Bank Of Nova Scotia">Bank Of Nova Scotia</option>
+                <option value="Bank Of Tokyo-Mitsubishi Ufj Ltd">Bank Of Tokyo-Mitsubishi Ufj Ltd</option>
+                <option value="Barclays Bank Plc">Barclays Bank Plc</option>
+                <option value="Bassein Catholic Co-op Bank Ltd">Bassein Catholic Co-op Bank Ltd</option>
+                <option value="Bharat Co-op Bank (Mumbai) Ltd">Bharat Co-op Bank (Mumbai) Ltd</option>
+                <option value="BNP Paribas">BNP Paribas</option>
+                <option value="Bombay Mercantile Co-operative bank Limited">Bombay Mercantile Co-operative bank
+                  Limited
+                </option>
+                <option value="Canara Bank">Canara Bank</option>
+                <option value="Catholic Syrian Bank Ltd">Catholic Syrian Bank Ltd</option>
+                <option value="Central Bank of India">Central Bank of India</option>
+                <option value="Chinatrust Commercial Bank">Chinatrust Commercial Bank</option>
+                <option value="Citibank India">Citibank India</option>
+                <option value="Citizencredit Co-op Bank Ltd">Citizencredit Co-op Bank Ltd</option>
+                <option value="City Union Bank Ltd">City Union Bank Ltd</option>
+                <option value="Commonwealth Bank of Australia">Commonwealth Bank of Australia</option>
+                <option value="Corporation Bank">Corporation Bank</option>
+                <option value="Cosmos Co-op Bank Ltd">Cosmos Co-op Bank Ltd</option>
+                <option value="Credit Agricole Corp and Investment Bank">Credit Agricole Corp and Investment Bank
+                </option>
+                <option value="DBS Bank">DBS Bank</option>
+                <option value="Dena Bank">Dena Bank</option>
+                <option value="Deutsche Bank Ag">Deutsche Bank Ag</option>
+                <option value="Development Credit Bank">Development Credit Bank</option>
+                <option value="Dhanlaxmi Bank Ltd">Dhanlaxmi Bank Ltd</option>
+                <option value="Dicgc">Dicgc</option>
+                <option value="Doha Bank">Doha Bank</option>
+                <option value="Dombivli Nagari Sahakari Bank Ltd">Dombivli Nagari Sahakari Bank Ltd</option>
+                <option value="Emirates NBD Bank  PJSC">Emirates NBD Bank PJSC</option>
+                <option value="Export-Import Bank of India">Export-Import Bank of India</option>
+                <option value="Federal Bank Ltd">Federal Bank Ltd</option>
+                <option value="Firstrand Bank Ltd">Firstrand Bank Ltd</option>
+                <option value="Greater Bombay Co-op Bank Ltd">Greater Bombay Co-op Bank Ltd</option>
+                <option value="Group Limited&quot;">Group Limited"</option>
+                <option value="HDFC Bank">HDFC Bank</option>
+                <option value="HSBC">HSBC</option>
+                <option value="HSBC Bank Oman S.A.O.G.">HSBC Bank Oman S.A.O.G.</option>
+                <option value="ICICI Bank">ICICI Bank</option>
+                <option value="IDBI Bank">IDBI Bank</option>
+                <option value="IDFC FIRST BANK LIMITED">IDFC FIRST BANK LIMITED</option>
+                <option value="IFCI Factors Limited">IFCI Factors Limited</option>
+                <option value="Indian Bank">Indian Bank</option>
+                <option value="Indian Overseas Bank">Indian Overseas Bank</option>
+                <option value="IndusInd Bank Ltd.">IndusInd Bank Ltd.</option>
+                <option value="Industrial and Commercial Bank of China Ltd.">Industrial and Commercial Bank of China
+                  Ltd.</option>
+                <option value="Industrial Bank of  Korea">Industrial Bank of Korea</option>
+                <option value="ING Vysya Bank">ING Vysya Bank</option>
+                <option value="Jammu &amp; Kashmir Bank Ltd.">Jammu &amp; Kashmir Bank Ltd.</option>
+                <option value="Janakalyan Sahakari Bank Ltd">Janakalyan Sahakari Bank Ltd</option>
+                <option value="Janata Sahkari Bank Ltd Pune">Janata Sahkari Bank Ltd Pune</option>
+                <option value="Jpmorgan Chase Bank">Jpmorgan Chase Bank</option>
+                <option value="Kalupur Commercial Co-op Bank Ltd">Kalupur Commercial Co-op Bank Ltd</option>
+                <option value="Kalyan Janata Sahakari Bank Ltd">Kalyan Janata Sahakari Bank Ltd</option>
+                <option value="Kapole Co-op Bank">Kapole Co-op Bank</option>
+                <option value="Karnataka Bank Ltd.">Karnataka Bank Ltd.</option>
+                <option value="Karnataka State Co-op Apex Bank">Karnataka State Co-op Apex Bank</option>
+                <option value="Karur Vysya Bank">Karur Vysya Bank</option>
+                <option value="KEB  Hana Bank">KEB Hana Bank</option>
+                <option value="Kotak Mahindra Bank">Kotak Mahindra Bank</option>
+                <option value="Krung Thai Bank PCL Mumbai">Krung Thai Bank PCL Mumbai</option>
+                <option value="Lakshmi Vilas Bank Ltd">Lakshmi Vilas Bank Ltd</option>
+                <option value="Mahanagar Co-op Bank Ltd">Mahanagar Co-op Bank Ltd</option>
+                <option value="Maharashtra State Co-operative Bank Limited">Maharashtra State Co-operative Bank
+                  Limited
+                </option>
+                <option value="Mashreq Bank Psc">Mashreq Bank Psc</option>
+                <option value="Mehsana Urban Co-op Bank Ltd">Mehsana Urban Co-op Bank Ltd</option>
+                <option value="Mizuho Corporate Bank Ltd">Mizuho Corporate Bank Ltd</option>
+                <option value="Nainital Bank Ltd">Nainital Bank Ltd</option>
+                <option value="National Australia Bank">National Australia Bank</option>
+                <option value="National Bank of Abu Dhabi PJSC">National Bank of Abu Dhabi PJSC</option>
+                <option value="New India Co-op Bank Ltd">New India Co-op Bank Ltd</option>
+                <option value="Nkgsb Co-op Bank Ltd">Nkgsb Co-op Bank Ltd</option>
+                <option value="Nutan Nagarik Sahakari Bank Ltd">Nutan Nagarik Sahakari Bank Ltd</option>
+                <option value="Oman International Bank Saog">Oman International Bank Saog</option>
+                <option value="Oriental Bank of Commerce">Oriental Bank of Commerce</option>
+                <option value="Parsik Janata Sahakari Bank Ltd">Parsik Janata Sahakari Bank Ltd</option>
+                <option value="Punjab &amp; Sind Bank">Punjab &amp; Sind Bank</option>
+                <option value="Punjab and Maharashtra Bank Ltd.">Punjab and Maharashtra Bank Ltd.</option>
+                <option value="Punjab National Bank">Punjab National Bank</option>
+                <option value="Qatar National Bank(QPSC)">Qatar National Bank(QPSC)</option>
+                <option value="Rabobank International">Rabobank International</option>
+                <option value="Rajkot Nagarik Sahakari Bank Ltd">Rajkot Nagarik Sahakari Bank Ltd</option>
+                <option value="Ratnakar Bank Ltd">Ratnakar Bank Ltd</option>
+                <option value="Reserve Bank Of India">Reserve Bank Of India</option>
+                <option value="Royal bank of scotland">Royal bank of scotland</option>
+                <option value="Saraswat Co-operative Bank Ltd.">Saraswat Co-operative Bank Ltd.</option>
+                <option value="Sberbank">Sberbank</option>
+                <option value="SBI Global Factors Ltd">SBI Global Factors Ltd</option>
+                <option value="Shamrao Vithal Co-op Bank Ltd">Shamrao Vithal Co-op Bank Ltd</option>
+                <option value="Shinhan Bank">Shinhan Bank</option>
+                <option value="Societe Generale">Societe Generale</option>
+                <option value="Sonali Bank Ltd.">Sonali Bank Ltd.</option>
+                <option value="South Indian Bank">South Indian Bank</option>
+                <option value="Standard Chartered Bank">Standard Chartered Bank</option>
+                <option value="State Bank Of Bikaner And Jaipur">State Bank Of Bikaner And Jaipur</option>
+                <option value="State Bank of Hyderabad">State Bank of Hyderabad</option>
+                <option value="State Bank of India">State Bank of India</option>
+                <option value="State Bank Of Mauritius Ltd">State Bank Of Mauritius Ltd</option>
+                <option value="State Bank of Mysore">State Bank of Mysore</option>
+                <option value="State Bank Of Patiala">State Bank Of Patiala</option>
+                <option value="State Bank of Saurashtra">State Bank of Saurashtra</option>
+                <option value="State Bank Of Travancore">State Bank Of Travancore</option>
+                <option value="Sumitomo Mitsui Banking Corporation">Sumitomo Mitsui Banking Corporation</option>
+                <option value="Surat Peoples Co-op Bank Ltd">Surat Peoples Co-op Bank Ltd</option>
+                <option value="Syndicate Bank">Syndicate Bank</option>
+                <option value="Tamilnad Mercantile Bank Ltd">Tamilnad Mercantile Bank Ltd</option>
+                <option value="Thane Janta Sahakari Bank, Ltd.">Thane Janta Sahakari Bank, Ltd.</option>
+                <option value="The Karad Urban Co-op Bank Ltd">The Karad Urban Co-op Bank Ltd</option>
+                <option value="The Nasik Merchants Co-op Bank Ltd">The Nasik Merchants Co-op Bank Ltd</option>
+                <option value="UBS AG">UBS AG</option>
+                <option value="UCO Bank">UCO Bank</option>
+                <option value="Union Bank of India">Union Bank of India</option>
+                <option value="United Bank of India">United Bank of India</option>
+                <option value="United Overseas Bank">United Overseas Bank</option>
+                <option value="Vijaya Bank">Vijaya Bank</option>
+                <option value="West Bengal State Co-op Bank Ltd">West Bengal State Co-op Bank Ltd</option>
+                <option value="Westpac Banking Corporation">Westpac Banking Corporation</option>
+                <option value="Woori Bank">Woori Bank</option>
+                <option value="Yes Bank">Yes Bank</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label fw-semibold">Enter full name, Ex: Firstname Lastname</label>
+              <input type="text" class="form-control" name="full_name"
+                placeholder="Enter full name, Ex: Firstname Lastname" required>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label fw-semibold">Enter your email id (Ex: some@something.com)</label>
+              <input type="email" class="form-control" name="email"
+                placeholder="Enter your email id (Ex: some@something.com)" required>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label fw-semibold">Enter 10-digit mobile number</label>
+              <input type="text" class="form-control" name="mobile" placeholder="Enter 10-digit mobile number" required>
+            </div>
+          </div>
+          <div style="font-size: 0.8rem;" class="mt-4 mb-2">
+            I have read and agreed to <a href="tos.html" style="color:rgb(233, 30, 99); font-weight:500;">Terms &
+              Conditions</a>
+            and
+            authorized FiscalMitra to contact me. This will override registry on DND / NDNC. I also hereby appoint
+            FiscalMitra as my authorised representative to receive my credit information from Cibil/ Equifax/ Experian/
+            Highmark (bureau). <b>By clicking submit you are agreeing to the Terms and Conditions.</b>
+          </div>
+          <button type="submit" class="btn w-100 py-2"
+            style="background:#e91e63; color:#fff; font-weight:600; font-size:18px;">SUBMIT</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- Form End -->
 
-  <!-- footer -->
+  <!-- Details -->
+  <div class="container-fluid casual-bg">
+    <div class="container text-muted pb-3">
+      <h3 class="text-dark pt-3">Loan against Property</h3>
+      <b>Attractive loan offers against property at affordable interest rates!</b>
+      <p class="text-muted">Loan against a property is a kind of mortgage loan available for both salaried and
+        self-employed professionals to fulfill their personal as well as business goals. In this type of loan scheme,
+        borrowers have to mortgage their property to secure the loan meant for personal as well as business purposes.
+        If you’re looking for similar loan options, look no further than Finance Mitra – your friend for life. Avail our
+        easy and customized loan against property loans and fulfill all your financial needs within a few clicks.</p>
+      <b>Eligibility</b>
+      <ul>
+        <li>Indian residents</li>
+        <li>Both salaried and self-employed can apply</li>
+        <li>Maximum tenure is 10 year</li>
+        <li>VAT returns for the last 12 months</li>
+      </ul>
+      <b>Documents Required:</b>
+      <b>FOR SALARIED PROFESSIONALS:</b>
+      <ul>
+        <li>2 months salary slip</li>
+        <li>6 months bank statement</li>
+        <li>Form 16 and ITR for last 2 years</li>
+        <li>Copy of Complete Property Paper With all Back chain</li>
+      </ul>
+      <b>FOR SELF-EMPLOYED:</b>
+      <b>Note: All documents are self attested by director /Partner's</b>
+      <ul>
+        <li>Company pan card</li>
+        <li> Copy of Pan card & Aadhar Card of all Director's / Partner's</li>
+        <li> Copy of Electricity & Telephone bill (Office & Residence)</li>
+        <li>Copy of last 3 years Audited Balance sheet, Trading and Profit & Loss</li>
+        <li> Accounts with All Annexure and Income Tax returns with computations of Income of firm/Company</li>
+        <li>Copy of 12 months Bank statement (Updated) of all exiting Current account</li>
+        <li> Copy of All government Registrations regarding Business (i.e. Sales Tax, Services Tax & Gst No. etc.)</li>
+        <li>Copy of Repayment schedule in case of any running loan(s) of firm/Company</li>
+        <li>Copy passport size Photograph of all director's/Partner's</li>
+        <li>CC AND OD SANCTION LETTER IF ANY</li>
+        <li>Sale tax return from April016 to till date</li>
+        <li>Copy of MOA /Partnership deed</li>
+        <li>Copy of Last 2 Years Individual ITR & COI & Last 6 Month bank Statement of all Directors/ Partner's</li>
+        <li>Copy of list of Director's & Share holding</li>
+        <li>Copy of Complete Property Paper With all Back chain</li>
+      </ul>
+      <b>Benefits of Loan against property from Finance Mitra</b>
+      <ul>
+        <li>Affordable rate of interest</li>
+        <li>Simple and easy documentation process</li>
+        <li>Planned loan process</li>
+        <li>Quick approval and disbursa</li>
+        <li>User-friendly repayment tenure</li>
+        <li>Minimal service charges and fee</li>
+      </ul>
+    </div>
+  </div>
+  <!-- Details End -->
+
+<!-- Faq -->
+<div class="container text-muted">
+  <h3 class="text-dark pt-3">FAQ's -</h3>
+  <b>Q1.What is Loan against Property?</b>
+  <p class="text-muted">A Loan Against Property is essentially a loan given against any property. The loan can be taken against fully constructed, residential, commercial properties and Industrial property (including Land) for business needs, marriage, medical expenses or any other personal needs.</p>
+  <b>Q2.Who can avail loan against Property?</b>
+  <p class="text-muted">Any Resident Indian Individual (salaried/ self-employed) can apply. The co-applicants can be close relatives, partnership firms, or even a Private Limited Company.</p>
+  <b>Q3.What are the income documents required for loan against property?</b>
+  <p class="text-muted">Salaried Customers need to submit their last 2 month’s salary slip, 6 months bank statement, form 16 and ITR and documents related to running loans.
+    <br>
+    Self-Employed customers need to submit complete set of ITR and Financials for last two financial years, 6 months Bank statement and documents related to running loans.
+</p>
+<b>Q4.What is the maximum possible tenure?</b>
+<p class="text-muted">We offer this Loan Against Property for max tenure of 10 years.</p>
+<b>Q5.What is “Loan to Value”?</b>
+<p class="text-muted">Loan to Value (LTV) is a term that is used to express the ratio of a loan to the value of the asset mortgaged. The loan is usually offered in the range of 60% to 70% of the market value of the property.</p>
+<b>Q6.How long will it take for my loan to get approved?</b>
+<p class="text-muted">It would take minimum of 7 working days after submission of required documents.</p>
+<b>Q7.What kind of additional help do I receive?</b>
+<p class="text-muted">You will receive expert legal and technical counseling that will help you make the right financial decision.</p>
+</div>
+<!-- Faq End -->
+
+    <!-- footer -->
   <div style="background-color: #1d3a59;" class="footer container-fluid">
     <footer class="container text-lg-start mt-5">
       <div class="row footer-data">
@@ -89,14 +381,15 @@
             <a href="tos.html">Terms of Services</a>
           </p>
           <p class="mb-1 footer-link">
-            <a href="ba.html">Become associate</a>
+            <a href="about-us.html">About Us</a>
           </p>
         </div>
-        
+
         <div class="col-12 col-md-7 col-lg-4 mb-3">
           <h6 class="mt-3">Contact Us</h6>
           <p class="mb-0 footer-link">
-            <a style="word-break: break-all;" href="mailto:plymoutheepl25@gmail.com" class="d-flex align-items-center gap-2">
+            <a style="word-break: break-all;" href="mailto:plymoutheepl25@gmail.com"
+              class="d-flex align-items-center gap-2">
               <img src="Assets/mail-icon.png" alt="">
               plymoutheepl25@gmail.com
             </a>
@@ -114,22 +407,22 @@
             </a>
           </p>
         </div>
-        
+
         <div class="social col-12 col-md-5 col-lg-3">
           <h6 class="mt-3">Connect with us</h6>
-         <a href="https://www.instagram.com/fiscalmitra/">
-          <img src="Assets/instagram.png" alt="">
-         </a>
-         <a href="https://x.com/Fiscalmitra25">
-          <img src="Assets/twitter.png" alt="">
-         </a>
-         <a href="https://www.youtube.com/@Fiscalmitra">
-          <img src="Assets/video.png" alt="">
-         </a>
+          <a href="https://www.instagram.com/fiscalmitra/">
+            <img src="Assets/instagram.png" alt="">
+          </a>
+          <a href="https://x.com/Fiscalmitra25">
+            <img src="Assets/twitter.png" alt="">
+          </a>
+          <a href="https://www.youtube.com/@Fiscalmitra">
+            <img src="Assets/video.png" alt="">
+          </a>
         </div>
-        
+
       </div>
-      <div class="col-12 p-3 text-center style="background-color: #1d3a59; color: white;">
+      <div class="col-12 p-3 text-center style=" background-color: #1d3a59; color: white;">
         © 2023 Fiscalmitra. All rights reserved.
     </footer>
   </div>
@@ -137,6 +430,20 @@
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxrwNa-v9UkT46VSTUw4xWmwsnFixxgV8eb2gAtj2ukd6y834ooVDJyc83wunLEVGE8/exec'; 
+const form = document.getElementById('lapForm');
+
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+    .then(response => {
+      alert("Thanks for submitting your details!");
+      form.reset();
+    })
+    .catch(error => alert("Something went wrong. Please try again later."));
+});
+</script>
 </body>
 
 </html>

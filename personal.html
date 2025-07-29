@@ -107,6 +107,18 @@
       margin-left: auto;
       margin-right: auto;
     }
+
+    @media (min-width: 990px) {
+      .business-cards-row {
+        gap: 5rem !important;
+      }
+    }
+
+    @media (max-width: 989.98px) {
+      .business-cards-row {
+        gap: 0 !important;
+      }
+    }
   </style>
 </head>
 
@@ -185,7 +197,8 @@
             </div>
             <div class="col-md-4">
               <label class="form-label fw-semibold">Enter your resident postal code</label>
-              <input type="text" class="form-control" name="postal_code" placeholder="Enter your resident postal code" required>
+              <input type="text" class="form-control" name="postal_code" placeholder="Enter your resident postal code"
+                required>
             </div>
             <div class="col-md-4">
               <label class="form-label fw-semibold">Enter your employment type</label>
@@ -339,15 +352,18 @@
             </div>
             <div class="col-md-4">
               <label class="form-label fw-semibold">Enter full name, Ex: Firstname Lastname</label>
-              <input type="text" class="form-control" name="full_name" placeholder="Enter full name, Ex: Firstname Lastname" required>
+              <input type="text" class="form-control" name="full_name"
+                placeholder="Enter full name, Ex: Firstname Lastname" required>
             </div>
             <div class="col-md-4">
               <label class="form-label fw-semibold">Enter your email id (Ex: some@something.com)</label>
-              <input type="email" class="form-control" name="email" placeholder="Enter your email id (Ex: some@something.com)" required>
+              <input type="email" class="form-control" name="email"
+                placeholder="Enter your email id (Ex: some@something.com)" required>
             </div>
             <div class="col-md-4">
               <label class="form-label fw-semibold">Enter 10-digit mobile number.</label>
-              <input type="text" class="form-control" name="mobile" placeholder="Enter 10-digit mobile number." required>
+              <input type="text" class="form-control" name="mobile" placeholder="Enter 10-digit mobile number."
+                required>
             </div>
           </div>
           <div style="font-size: 0.8rem;" class="mt-4 mb-2">
@@ -567,12 +583,14 @@
           </div>
         </div>
       </div>
-      <div class="accordion mt-3" id="accordionExampleRow" style="max-width:900px; margin-left:auto; margin-right:auto;">
-        <div style="gap: 5rem;" class="d-flex justify-content-center flex-wrap">
+      <div class="accordion mt-3" id="accordionExampleRow"
+        style="max-width:900px; margin-left:auto; margin-right:auto;">
+        <div class="d-flex justify-content-center flex-wrap business-cards-row">
           <div class="card mb-3" style="min-width:320px; max-width:400px; flex:1 1 320px;">
             <div class="card-header" id="headingFive">
               <h2 class="mb-0">
-                <button class="accordion-btn btn p-0 border-0 bg-transparent shadow-none text-dark fw-semibold collapsed"
+                <button
+                  class="accordion-btn btn p-0 border-0 bg-transparent shadow-none text-dark fw-semibold collapsed"
                   type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false"
                   aria-controls="collapseFive" style="font-size:1rem;">
                   <span class="icon-toggle">
@@ -585,9 +603,11 @@
             </div>
             <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExampleRow">
               <div class="card-body">
-                At FiscalMitra, we help you save time, money, and energy with our expert service to avail of the personal
+                At FiscalMitra, we help you save time, money, and energy with our expert service to avail of the
+                personal
                 loan you want. Whether you are hoping to meet your unexpected personal expenses, increase the cash flow
-                for your business, or close your existing loans, we understand the difficulties of the long and stressful
+                for your business, or close your existing loans, we understand the difficulties of the long and
+                stressful
                 loan process.
               </div>
               <div class="card-body">
@@ -601,7 +621,8 @@
           <div class="card mb-3" style="min-width:320px; max-width:400px; flex:1 1 320px;">
             <div class="card-header" id="headingSix">
               <h2 class="mb-0">
-                <button class="accordion-btn btn p-0 border-0 bg-transparent shadow-none text-dark fw-semibold collapsed"
+                <button
+                  class="accordion-btn btn p-0 border-0 bg-transparent shadow-none text-dark fw-semibold collapsed"
                   type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false"
                   aria-controls="collapseSix" style="font-size:1rem;">
                   <span class="icon-toggle">
@@ -616,7 +637,8 @@
               <div class="card-body">
               </div>
               <ul>
-                <li>Proof of Identity – Driving License/Voters ID/Permanent Account Number (PAN Card)/Passport/Aadhar Card
+                <li>Proof of Identity – Driving License/Voters ID/Permanent Account Number (PAN Card)/Passport/Aadhar
+                  Card
                 </li>
                 <li>Address Proof – Rental Agreement/Electricity Bill/Utility Bill/Passport/Bank
                   Passbook/Government-authorized Identity proof</li>
@@ -705,7 +727,7 @@
             <a href="tos.html">Terms of Services</a>
           </p>
           <p class="mb-1 footer-link">
-            <a href="ba.html">Become associate</a>
+            <a href="about-us.html">About Us</a>
           </p>
         </div>
 
@@ -756,18 +778,19 @@
   <script src="script.js"></script>
 
   <script>
-const scriptURL = 'https://script.google.com/macros/s/AKfycbz0fv4jYsc2uc_Jx5GlFWW1IG097S7g4m1-xZahZwKcINYJsjuXNDImWuAWRiEYJLQ/exec'; // Replace with your Apps Script Web App URL
-const form = document.getElementById('personalLoanForm');
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbz0fv4jYsc2uc_Jx5GlFWW1IG097S7g4m1-xZahZwKcINYJsjuXNDImWuAWRiEYJLQ/exec'; // Replace with your Apps Script Web App URL
+    const form = document.getElementById('personalLoanForm');
 
-form.addEventListener('submit', e => {
-  e.preventDefault();
-  fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-    .then(response => {
-      alert("Thanks for submitting your details!");
-      form.reset();
-    })
-    .catch(error => alert("Something went wrong. Please try again later."));
-});
-</script>
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+          alert("Thanks for submitting your details!");
+          form.reset();
+        })
+        .catch(error => alert("Something went wrong. Please try again later."));
+    });
+  </script>
 </body>
+
 </html>

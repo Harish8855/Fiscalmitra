@@ -237,7 +237,8 @@ b {
 }
 
 .email-promo button:hover {
-  background-color: var(--secondary-color);
+  
+  /* background-color: var(--secondary-color); */
 }
 
 /* Email promo end */
