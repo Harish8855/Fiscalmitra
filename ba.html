@@ -23,6 +23,8 @@
     /* ba.html associate form custom styles */
     .card {
       border-radius: 12px;
+      /* Add responsive shadow for mobile */
+      box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
     }
 
     .form-label {
@@ -41,10 +43,50 @@
       font-weight: 600;
       border-radius: 4px;
       transition: background 0.2s;
+      width: 100%;
+      /* Make button full width on mobile */
     }
 
     .btn[type="submit"]:hover {
       background: #c2185b;
+    }
+
+    /* Responsive styles for form on small screens */
+    @media (max-width: 576px) {
+      .container.p-5 {
+        padding: 1.2rem !important;
+      }
+
+      .card-body.p-5 {
+        padding: 1.2rem !important;
+      }
+
+      .card {
+        border-radius: 8px;
+      }
+
+      .form-label {
+        font-size: 0.98rem;
+      }
+
+      .form-control {
+        font-size: 1rem;
+        padding: 0.7rem 0.9rem;
+      }
+
+      .text-center.mb-2,
+      .text-center.mb-4 {
+        font-size: 1.1rem !important;
+      }
+
+      .btn[type="submit"] {
+        font-size: 1rem;
+        padding: 0.7rem 0;
+      }
+
+      .row.g-3> [class^="col-"] {
+        margin-bottom: 0.7rem;
+      }
     }
   </style>
 </head>
@@ -116,30 +158,30 @@
   <div class="container-fluid casual-bg">
     <div class="container p-5">
       <div class="row justify-content-center">
-        <div class="col-lg-8">
+        <div class="col-lg-8 col-md-10 col-12">
           <div class="card shadow-sm border-0">
             <div class="card-body p-5">
               <h2 class="text-center mb-2" style="font-weight:600;">Become a Associate</h2>
               <p class="text-center mb-4" style="color:#666;">Become a Partner - Start earning in 4 easy steps</p>
               <form id="associateForm">
                 <div class="row g-3">
-                  <div class="col-md-6">
+                  <div class="col-md-6 col-12">
                     <label class="form-label fw-semibold" for="name">Name</label>
                     <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-6 col-12">
                     <label class="form-label fw-semibold" for="email">Email</label>
                     <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-6 col-12">
                     <label class="form-label fw-semibold" for="phone">Phone</label>
                     <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone" required>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-6 col-12">
                     <label class="form-label fw-semibold" for="experience">How many year of experience</label>
                     <input type="text" class="form-control" id="experience" name="experience" placeholder="How many year of experience">
                   </div>
-                  <div class="col-md-12">
+                  <div class="col-md-12 col-12">
                     <label class="form-label fw-semibold" for="target">Target achieve in a month ?</label>
                     <input type="text" class="form-control" id="target" name="target" placeholder="Target achieve in a month ?">
                   </div>
