@@ -20,10 +20,8 @@
       align-items: center;
     }
 
-    /* ba.html associate form custom styles */
     .card {
       border-radius: 12px;
-      /* Add responsive shadow for mobile */
       box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
     }
 
@@ -53,6 +51,16 @@
 
     /* Responsive styles for form on small screens */
     @media (max-width: 576px) {
+      #baFormContainer {
+        width: 100vw !important;
+        max-width: 100vw !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        border-radius: 0 !important;
+      }
+
       .container.p-5 {
         padding: 1.2rem !important;
       }
@@ -84,7 +92,7 @@
         padding: 0.7rem 0;
       }
 
-      .row.g-3> [class^="col-"] {
+      .row.g-3>[class^="col-"] {
         margin-bottom: 0.7rem;
       }
     }
@@ -93,10 +101,10 @@
 
 <body>
   <!-- loader -->
- <div id="loader">
-        <div class="loader-text">Fiscalmitra</div>
-    </div>
-<!-- loader end -->
+  <div id="loader">
+    <div class="loader-text">Fiscalmitra</div>
+  </div>
+  <!-- loader end -->
 
   <!-- Navbar Start -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
@@ -162,7 +170,7 @@
   </div>
 
   <div class="container-fluid casual-bg">
-    <div class="container p-5">
+    <div id="baFormContainer" class="container p-5 bg-white">
       <div class="row justify-content-center">
         <div class="col-lg-8 col-md-10 col-12">
           <div class="card shadow-sm border-0">
@@ -185,11 +193,13 @@
                   </div>
                   <div class="col-md-6 col-12">
                     <label class="form-label fw-semibold" for="experience">How many year of experience</label>
-                    <input type="text" class="form-control" id="experience" name="experience" placeholder="How many year of experience">
+                    <input type="text" class="form-control" id="experience" name="experience"
+                      placeholder="How many year of experience">
                   </div>
                   <div class="col-md-12 col-12">
                     <label class="form-label fw-semibold" for="target">Target achieve in a month ?</label>
-                    <input type="text" class="form-control" id="target" name="target" placeholder="Target achieve in a month ?">
+                    <input type="text" class="form-control" id="target" name="target"
+                      placeholder="Target achieve in a month ?">
                   </div>
                 </div>
                 <div class="text-start mt-4">
@@ -277,19 +287,19 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
   <script>
-const scriptURL = 'https://script.google.com/macros/s/AKfycbyDmXhqUJwHO5DgzFcglDVG_LMnr5ihK_FqPbKm7Zty6xQ5Y4ObMtVKkuINbgms5xGN/exec'; 
-form = document.getElementById('associateForm');
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyDmXhqUJwHO5DgzFcglDVG_LMnr5ihK_FqPbKm7Zty6xQ5Y4ObMtVKkuINbgms5xGN/exec';
+    const form = document.getElementById('associateForm');
 
-form.addEventListener('submit', e => {
-  e.preventDefault();
-  fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-    .then(response => {
-      alert("Thanks for submitting your details!");
-      form.reset();
-    })
-    .catch(error => alert("Something went wrong. Please try again later."));
-});
-</script>
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+          alert("Thanks for submitting your details!");
+          form.reset();
+        })
+        .catch(error => alert("Something went wrong. Please try again later."));
+    });
+  </script>
 </body>
 
 </html>
