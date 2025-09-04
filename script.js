@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    ['accordionExampleMain', 'accordionExampleRow'].forEach(function(id) {
+    ['accordionExampleMain', 'accordionExampleRow'].forEach(function (id) {
         var accordion = document.getElementById(id);
         if (!accordion) return;
         accordion.addEventListener('show.bs.collapse', function (e) {
@@ -31,4 +31,23 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
+});
+
+
+window.addEventListener('load', function () {
+    document.body.classList.add('loaded');
+});
+
+window.addEventListener("DOMContentLoaded", function () {
+    const schemaScript = document.createElement("script");
+    schemaScript.type = "application/ld+json";
+    schemaScript.text = JSON.stringify({
+        "@context": "",
+        "@type": "Organization",
+        "name": "Fiscalmitra",
+        "url": "fiscalmitra.com",
+        "logo": "Assewts/images/fiscalmitra-logo.png",
+    });
+
+    document.head.appendChild(schemaScript);
 });
