@@ -42,10 +42,10 @@ window.addEventListener("DOMContentLoaded", function () {
     const schemaScript = document.createElement("script");
     schemaScript.type = "application/ld+json";
     schemaScript.text = JSON.stringify({
-        "@context": "",
+        "@context": "https://schema.org",
         "@type": "Organization",
         "name": "Fiscalmitra",
-        "url": "fiscalmitra.com",
+        "url": "https://fiscalmitra.com",
         "logo": "Assewts/images/fiscalmitra-logo.png",
     });
 
